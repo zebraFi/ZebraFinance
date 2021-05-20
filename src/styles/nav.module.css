@@ -1,0 +1,83 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--nav-color);
+  height: 80px;
+  z-index: var(--nav-Zindex);
+  border-bottom: 0.5rem var(--gold) solid;
+}
+.innerContainer {
+  width: 85%;
+  height: 100%;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: var(--nav-Zindex);
+}
+.logoContainer {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.logo {
+  height: 7rem;
+}
+.content,
+.collapseContent {
+  flex: 2;
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+.toggle {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: calc(var(--nav-z) + 1);
+  cursor: pointer;
+  height: 5rem;
+  width: 5rem;
+}
+.content {
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 0 0 0;
+  display: none;
+}
+.collapseContent {
+  background: var(--nav-color);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  z-index: var(--nav-drop-z);
+  border-bottom: 0.5rem var(--gold) solid;
+}
+.content li,
+.collapseContent li {
+  
+  font-size: 16px;
+  font-weight: 800;
+  font-family: "Exo 2";
+  color: white;
+  display: inline-block;
+  cursor: pointer;
+}
+.collapseContent li {
+  margin: 2rem 0;
+}
+@media only screen and (min-width: 568px) {
+  .content {
+    display: flex;
+  }
+  .collapseContent,
+  .toggle {
+    display: none;
+  }
+}

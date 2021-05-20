@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.openIcon,
+.closeIcon {
+  z-index: var(--ToggleIconIndex);
+  cursor: pointer;
+  display: block;
+  height: 30px;
+  width: 35px;
+  padding: 0 5px;
+  transition: 0.1s ease;
+  z-index: var(--nav-icon-z);
+}
+.openIcon:hover,
+.closeIcon:hover {
+  transition: 0.1s ease;
+  padding: 0 2px;
+}
+.bar {
+  height: 3px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #fff;
+  z-index: 10;
+}
+.openIcon > .bar {
+  transition: 0.3s ease;
+  background-color: var(--gold);
+}
+
+.openIcon > .bar1 {
+  transform: translateY(8px);
+}
+.openIcon > .bar2 {
+  opacity: 1;
+  transform: translateY(12px);
+}
+.openIcon > .bar3 {
+  transform: translateY(16px);
+}
+
+.closeIcon > .bar {
+  transition: 0.3s ease;
+  background-color: var(--gold);
+}
+
+.closeIcon > .bar1 {
+  transform: translateY(14px) rotate(-45deg);
+}
+.closeIcon > .bar2 {
+  opacity: 0;
+}
+.closeIcon > .bar3 {
+  transform: translateY(8px) rotate(45deg);
+}
+
+@media only screen and (min-width: 568px) {
+  .openIcon,
+  .closeIcon {
+    display: none;
+  }
+}

@@ -1,0 +1,40 @@
+.container {
+  width: 100%;
+  background: var(--nav-color);
+  min-height: 8rem;
+  z-index: var(--nav-Zindex);
+
+  border-top: 0.1rem var(--gold) solid;
+}
+.innerContainer {
+  width: 85%;
+  height: 100%;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: var(--nav-Zindex);
+  padding: 2rem 0;
+}
+.logoContainer {
+  flex: 1;
+}
+.logo {
+  height: 7rem;
+  width: 7rem;
+}
+.links {
+  flex: 1;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 0 0 0;
+  display: flex;
+}
+.container p {
+  padding: 4rem 0 2rem 0;
+  margin: 0;
+  color: var(--gold);
+}
+

@@ -1,0 +1,32 @@
+.container{
+  margin:10rem  0 0 0;
+  padding: 10rem 0;
+  background: linear-gradient(
+    90deg,
+    rgba(32, 32, 32, 1) 21%,
+    rgba(19, 19, 19, 1) 100%
+  );
+}
+.cryptoInfo {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  width: 100%;
+}
+.cryptoCard {
+  flex: 1;
+  color: white;
+  position: relative;
+  text-align: center;
+  background-color: hsl(0deg 1% 39% / 50%);
+  box-shadow: inset 0 0 3rem 0.01rem hsl(36, 48%, 54%);
+  border-radius: 10px;
+  margin: 4rem 1rem;
+  padding: 5rem 2rem 1rem 2rem;
+  /* width: 300px; */
+  /* height: 300px; */
+}
+.cryptoCard img {
+  height: 100px;
+  width: 100px;
+}

@@ -1,0 +1,98 @@
+import React, { useEffect, useState, useRef } from "react"
+import * as styles from "../styles/tokenomics.module.css"
+import { useSpring, animated, config } from "@react-spring/web"
+
+const Card = ({ countStart, sub, src, num }) => {
+  const props = useSpring({
+    from: { number: num * 0.9 },
+    to: { number: countStart ? num : num * 0.9 },
+    // config: config.molasses,
+  })
+  return (
+    <div className={styles.card}>
+      <img src={src} />
+      <animated.h2 className={styles.content}>
+        {props.number.to(x => {
+          let length = (Math.log(x) * Math.LOG10E + 1) | 0
+          let Ngroups = Math.floor(length / 3)
+          let formattedNumber = ""
+          while (Ngroups > 1) {
+            formattedNumber =
+            x.toString().slice(length - 3, length) + "," + formattedNumber
+            x = Math.floor(x / 1000)
+            length -= 3
+            Ngroups -= 1
+          }
+          formattedNumber = x.toString().slice(0, length) + "," + formattedNumber
+          return formattedNumber.slice(0, formattedNumber.length - 1)
+        })}
+      </animated.h2>
+     {sub}
+    </div>
+  )
+}
+
+function Tokenomics({ pattern }) {
+  const [countStart, setCountStart] = useState(false)
+  const CardRef = useRef()
+  useEffect(() => {
+    const handleScroll = e => {
+      //   console.log(window.pageYOffset)
+      CardRef.current &&
+        CardRef.current.getBoundingClientRect().top <
+          window.innerHeight * 0.65 &&
+        !countStart &&
+        setCountStart(true)
+    }
+    window.addEventListener("scroll", handleScroll, { passive: "true" })
+    return () => {
+      window.removeEventListener("scroll", handleScroll, { passive: "true" })
+    }
+  }, [])
+  return (
+    <div className={styles.container}>
+      <div ref={CardRef} className={styles.row}>
+        <Card
+          countStart={countStart}
+          src="/coins.svg"
+          num={1000000000}
+          sub={<p>Total</p>}
+        />
+        <Card
+          countStart={countStart}
+          src="/airdrop.svg"
+          num={190000000}
+          sub={<p>19%<br/>Multiple Airdrops</p>}
+        />
+        <Card
+          countStart={countStart}
+          src="/bullhorn.svg"
+          num={150000000}
+          sub={<p>15%<br/>Marketing</p>}
+        />
+
+        <Card
+          countStart={countStart}
+          src="/investment.svg"
+          num={60000000}
+          sub={<p>6%<br/>Dev Funds</p>}
+        />
+        <Card
+          countStart={countStart}
+          src="/strategic-plan.svg"
+          num={70000000}
+          sub={<p>7%<br/>Future Insentives</p>}
+        />
+        <Card
+          countStart={countStart}
+          src="/burn.svg"
+          num={200000000}
+          sub={<p>20% Burn<br/>(10% before and after Airdrop) </p>}
+        />
+        {/* <Card title="190,000,000" sub="Airdrop" /> */}
+      </div>
+    </div>
+  )
+}
+
+export default Tokenomics

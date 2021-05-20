@@ -1,0 +1,53 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  position: relative;
+  min-height: 600px;
+  height: 100vh;
+  background: url("/newBg1.png") border-box no-repeat scroll left;
+  background-size: cover;
+  padding: 0 8rem;
+
+}
+.container::before,
+.container::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+}
+.container::before {
+  top: 0;
+  left: 0;
+
+  background-color: var(--onyx);
+}
+.container::after {
+  top: 0;
+  left: 50%;
+}
+
+.container h1 {
+  margin: 2rem 0;
+  background: linear-gradient(90deg, var(--gold) 50%, var(--onyx) 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Poppins";
+}
+.container h3 {
+  font-size: 3rem;
+  background: linear-gradient(90deg, var(--gold) 50%, var(--onyx) 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Poppins";
+}
+@media only screen and (max-width: 500px) {
+  .container{
+    padding: 0 4rem;
+  }
+}
