@@ -46,9 +46,11 @@ function Tokenomics() {
         !countStart &&
         setCountStart(true)
     }
+    window.addEventListener("load",handleScroll)
     window.addEventListener("scroll", handleScroll, { passive: "true" })
     return () => {
       window.removeEventListener("scroll", handleScroll, { passive: "true" })
+      window.removeEventListener("load",handleScroll)
     }
   }, [])
   return (
