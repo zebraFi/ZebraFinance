@@ -4,14 +4,17 @@ import { useSpring, animated } from "@react-spring/web"
 
 const Card = ({ countStart, sub, src, num }) => {
   const props = useSpring({
-    from: { number: num * 0.9 },
-    to: { number: countStart ? num : num * 0.9 },
+    from: { number: num * 0.9, opacity: 0 },
+    to: { number: countStart ? num : num * 0.9, opacity: countStart ? 1 : 0 },
     // config: config.molasses,
   })
   return (
     <div className={styles.card}>
       <img src={src} />
-      <animated.h2 className={styles.content}>
+      <animated.h2
+        style={{ opacity: props.opacity }}
+        className={styles.content}
+      >
         {props.number.to(x => {
           let length = (Math.log(x) * Math.LOG10E + 1) | 0
           let remainder = length % 3 !== 0
@@ -46,11 +49,11 @@ function Tokenomics() {
         !countStart &&
         setCountStart(true)
     }
-    window.addEventListener("load",handleScroll)
+    window.addEventListener("load", handleScroll)
     window.addEventListener("scroll", handleScroll, { passive: "true" })
     return () => {
       window.removeEventListener("scroll", handleScroll, { passive: "true" })
-      window.removeEventListener("load",handleScroll)
+      window.removeEventListener("load", handleScroll)
     }
   }, [])
   return (
