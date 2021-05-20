@@ -32,7 +32,6 @@ function Roadmap() {
         if (ele.getBoundingClientRect().top < window.innerHeight * 0.8) {
           ele.classList.add(styles.bounce)
         }
-        console.log(ele, ele.getBoundingClientRect().top)
       })
     }
     checkElements()
