@@ -126,7 +126,7 @@ function Landing({ text }) {
     opacity: 1,
     y: 0,
     from: { opacity: 0, y: 100 },
-    delay: 1000,
+    delay: 500,
   })
 
   return (

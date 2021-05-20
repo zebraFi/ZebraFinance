@@ -17,7 +17,7 @@ function Nav({ index }) {
   const [collapse, setCollapse] = useState(true)
   const props = useSpring({
     from: { y: `-200%` },
-    to: { y: collapse ? `-200%` : `0.5%` },
+    to: { y: collapse ? `-200%` : `0.3%` },
     config: config.gentle,
   })
   return (
