@@ -12,7 +12,6 @@ import Nav from "./Nav"
 import SEO from "./seo"
 
 import Footer from "./Footer"
-import "./layout.css"
 
 const Layout = ({ children, index,description,title }) => {
   const data = useStaticQuery(graphql`
