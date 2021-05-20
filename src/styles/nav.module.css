@@ -6,7 +6,7 @@
   background: var(--nav-color);
   height: 80px;
   z-index: var(--nav-Zindex);
-  border-bottom: 0.5rem var(--gold) solid;
+  border-bottom: 0.1rem var(--gold) solid;
 }
 .innerContainer {
   width: 85%;

@@ -1,4 +1,5 @@
 import React from "react"
+import { useTrail, animated, config } from "@react-spring/web"
 import * as styles from "../styles/landing.module.css"
 
 const Logo = ({ className }) => (
@@ -118,14 +119,25 @@ const Logo = ({ className }) => (
     </g>
   </svg>
 )
-function Landing({text}) {
+function Landing({ text }) {
+  const items = [<Logo className={styles.logo} />, <h1>Zebra Finance</h1>, text]
+  const trail = useTrail(items.length, {
+    config: config.wobbly,
+    opacity: 1,
+    y: 0,
+    from: { opacity: 0, y: 100 },
+    delay: 1000,
+  })
+
   return (
     <div style={{ position: "relative" }}>
-        <div className={styles.container}>
-          <Logo className={styles.logo} />
-          <h1>Zebra Finance</h1>
-          {text}
-        </div>
+      <div className={styles.container}>
+        {trail.map(({ ...style }, index) => (
+          <animated.div key={index} className={styles.trailsText} style={style}>
+            {items[index]}
+          </animated.div>
+        ))}
+      </div>
     </div>
   )
 }

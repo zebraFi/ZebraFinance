@@ -1,16 +1,16 @@
 .container {
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
   position: relative;
-  min-height: 600px;
-  height: 100vh;
-  background: url("/newBg1.png") border-box no-repeat scroll left;
+  min-height: 525px;
+  height: 90vh;
+  background: url("/newBg.png") border-box no-repeat scroll left;
   background-size: cover;
-  padding: 0 8rem;
+  padding:  0 8rem;
 
 }
 .container::before,
@@ -30,17 +30,19 @@
 .container::after {
   top: 0;
   left: 50%;
+  background-color: var(--gold);
 }
 
 .container h1 {
   margin: 2rem 0;
+  font-size: 5rem;
   background: linear-gradient(90deg, var(--gold) 50%, var(--onyx) 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Poppins";
 }
 .container h3 {
-  font-size: 3rem;
+  font-size: 2rem;
   background: linear-gradient(90deg, var(--gold) 50%, var(--onyx) 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -48,6 +50,10 @@
 }
 @media only screen and (max-width: 500px) {
   .container{
-    padding: 0 4rem;
+    padding: 8rem 2rem;
+  }
+  .container h1 {
+    margin: 2rem 0;
+   font-size: 5rem;
   }
 }
