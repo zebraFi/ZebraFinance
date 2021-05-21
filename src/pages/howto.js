@@ -84,7 +84,6 @@ function howto() {
           </div>
           <div>
             <StaticImage
-              width="363"
               style={{ width: "100%" }}
               src="../../static/network.jpeg"
               alt="A"
@@ -120,8 +119,7 @@ function howto() {
           </div>
           <div>
             <StaticImage
-              width="363"
-              style={{ width: "100%" }}
+                style={{ width: "100%" }}
               src="../../static/AddToken.jpeg"
               alt="A"
               placeholder="blurred"
