@@ -16,40 +16,91 @@ const chartColors = [
   "#1c21b5",
 ]
 const chartLegend = [
-  <>
-    <span>80 million (8%)</span> to be distributed at <span>presale</span>{" "}
-    (Purchasers must purchase <span>Min:0.5BNB</span> and <span>Max:1BNB</span>)
-  </>,
-  <>
-    <span>57.6 million (5.76%)</span>to the LP
-  </>,
-  <>
-    <span>8 million (0.8%)</span> for burn rate at{" "}
-    <span>10% per transaction fee</span>
-  </>,
-  <>
-    <span>1.6 million (1.6%)</span> for fees
-  </>,
-  <>
-    <span>7 million (0.7%)</span> presale airdrop
-  </>,
-  <>
-    <span>6 million (0.6%)</span> marketing airdrop
-  </>,
-  <>
-    <span>250 million (25%)</span> Marketing (multisig wallet, 3 member
-    marketing team)
-  </>,
-  <>
-    <span>100 million (10%)</span> Dev Funds (multisig 3 signers. To be used to
-    pay Devs based on future work)
-  </>,
-  <>
-    <span>120 million (12%)</span> Future incentives
-  </>,
-  <>
-    <span>120 million (12%)</span> in team tokens
-  </>,
+  {
+    color: "#bf7300",
+    ele: (
+      <>
+        <span>80 million (8%)</span> to be distributed at <span>presale</span>{" "}
+        (Purchasers must purchase <span>Min:0.5BNB</span> and{" "}
+        <span>Max:1BNB</span>)
+      </>
+    ),
+  },
+  {
+    color: "#119618",
+    ele: (
+      <>
+        <span>57.6 million (5.76%)</span>to the LP
+      </>
+    ),
+  },
+  {
+    color: "#dc3912",
+    ele: (
+      <>
+        <span>8 million (0.8%)</span> for burn rate at{" "}
+        <span>10% per transaction fee</span>
+      </>
+    ),
+  },
+  {
+    color: "#0099c6",
+    ele: (
+      <>
+        <span>1.6 million (1.6%)</span> for Fees
+      </>
+    ),
+  },
+  {
+    color: "#00ffc4",
+    ele: (
+      <>
+        <span>7 million (0.7%)</span> Presale Airdrop
+      </>
+    ),
+  },
+  {
+    color: "#ff69b4",
+    ele: (
+      <>
+        <span>6 million (0.6%)</span> Marketing Airdrop
+      </>
+    ),
+  },
+  {
+    color: "#810081",
+    ele: (
+      <>
+        <span>250 million (25%)</span> Marketing (multisig wallet, 3 member
+        marketing team)
+      </>
+    ),
+  },
+  {
+    color: "#bc3965",
+    ele: (
+      <>
+        <span>100 million (10%)</span> Dev Funds (multisig 3 signers. To be used
+        to pay Devs based on future work)
+      </>
+    ),
+  },
+  {
+    color: "#581515",
+    ele: (
+      <>
+        <span>120 million (12%)</span> Future incentives
+      </>
+    ),
+  },
+  {
+    color: "#1c21b5",
+    ele: (
+      <>
+        <span>120 million (12%)</span> in Team Tokens
+      </>
+    ),
+  },
 ]
 function Whitepaper() {
   const status = useScript("https://www.gstatic.com/charts/loader.js")
@@ -82,33 +133,37 @@ function Whitepaper() {
       <h2 className="txtGradient">1 Billion total supply</h2>
       <hr />
       <div className={styles.chartContainer}>
-        <div
-          className={styles.chart}
-          id="chart_div"
-        ></div>
+        <div className={styles.chart} id="chart_div"></div>
         <ul className={styles.pieTag}>
           {chartLegend.map((legend, index) => {
             return (
               <li key={index}>
                 <div
-                  style={{ backgroundColor: chartColors[index] }}
+                  style={{ backgroundColor: legend.color }}
                   className={styles.disc}
                 />
-                {legend}
+                {legend.ele}
               </li>
             )
           })}
         </ul>
       </div>
-          <hr/>
+      <hr />
       <div className={styles.container}>
-        <h4 style={{textAlign:"left"}}>
-          <span>147.2 Million</span> tokens will be used to raise <span>80BNB</span> at IDO. These are utilised as follows:
+        <h4 style={{ textAlign: "left" }}>
+          <span>147.2 Million</span> tokens will be used to raise{" "}
+          <span>80BNB</span> at IDO. These are utilised as follows:
         </h4>
         <ul className={styles.info}>
-          <li><span>70%</span> Locked for liquidity</li>
-          <li><span>20%</span> for Marketing</li>
-          <li><span>10%</span> for Buyback</li>
+          <li>
+            <span>70%</span> Locked for liquidity
+          </li>
+          <li>
+            <span>20%</span> for Marketing
+          </li>
+          <li>
+            <span>10%</span> for Buyback
+          </li>
         </ul>
         <h2>Total allocation for above: 954.2 million (95.42%)</h2>
         <h2>Remainder after allocation: 45.8 million (4.58%)</h2>
@@ -160,7 +215,7 @@ function drawChart() {
       width: "100%",
     },
     colors: chartColors,
-    fontSize:16,
+    fontSize: 16,
     slices: {
       0: { offset: 0.1 },
       1: { offset: 0.1 },
