@@ -57,7 +57,7 @@
   align-items: center;
   padding: 2rem 0;
   z-index: var(--nav-drop-z);
-  border-bottom: 0.5rem var(--gold) solid;
+  border-bottom: 0.1rem var(--gold) solid;
 }
 .content li,
 .collapseContent li {

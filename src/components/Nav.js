@@ -47,6 +47,14 @@ function Nav({ index }) {
               How to buy
             </Link>
           </li>
+          <li>
+            <Link
+              style={index === 2 ? selectedStyle : unSelectedStyle}
+              to="/farm"
+            >
+              Farm
+            </Link>
+          </li>
           <li style={selectedStyle}>
             <span
 
@@ -83,6 +91,14 @@ function Nav({ index }) {
             How to buy
           </Link>
         </li>
+        <li>
+            <Link
+              style={index === 2 ? selectedStyle : unSelectedStyle}
+              to="/farm"
+            >
+              Farm
+            </Link>
+          </li>
         <li style={selectedStyle}>
           <span
           // target="_blank"

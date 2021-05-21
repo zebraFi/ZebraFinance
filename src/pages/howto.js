@@ -22,9 +22,9 @@ function howto() {
           </div>
           <div style={{ height: "25rem" }}>
             <a
-              // href="https://metamask.io/download"
-              // target="_blank"
-              // rel="noopener noreferrer"
+              href="https://metamask.io/download"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img className={styles.fox} src="/fox.svg" />
               <p
@@ -41,7 +41,7 @@ function howto() {
             <h2 className="txtGradient">RPC Setup for MetaMask </h2>
             <p>
               Open MetaMask wallet by clicking the extension button. Then open
-              the networks window by clicking the network dropdown on the top,
+              the <span style={{color:'#b1874b',fontWeight:'700'}}>Networks Window </span>by clicking the network dropdown on the top,
               as demonstrated to the right.
               <br />
               <br />
@@ -69,10 +69,29 @@ function howto() {
               style={{ width: "100%" }}
               src="../../static/maskOptions.jpeg"
               alt="A"
+              placeholder="blurred"
             />
           </div>
         </div>
 
+        <div className={styles.row}>
+          <div>
+            <h2 className="txtGradient">Ensure Network Selection </h2>
+            <p>
+              Ensure you select the <span style={{color:'#b1874b',fontWeight:'700'}}>Binance Smart Chain</span> network before proceeding.
+             
+            </p>
+          </div>
+          <div>
+            <StaticImage
+              width="363"
+              style={{ width: "100%" }}
+              src="../../static/network.jpeg"
+              alt="A"
+              placeholder="blurred"
+            />
+          </div>
+        </div>
         <div className={styles.row}>
           <div>
             <h2 className="txtGradient">Adding ZeebraFinance Token to your wallet </h2>
@@ -81,8 +100,8 @@ function howto() {
               your newly purchased ZeebraFinance Token to your Metamask wallet.
               <br />
               <br />
-              Go ahead and click "add token" at the bottom of your wallet,
-              proceed to click "custom token" then paste our contract address;
+              Go ahead and click <span style={{color:'#b1874b',fontWeight:'700'}}>Add Token</span> at the bottom of your wallet,
+              and then <span style={{color:'#b1874b',fontWeight:'700'}}>paste our contract address</span>
               <br />
               <br />
               <span style={{ color: "#f73104" }}>
@@ -90,7 +109,7 @@ function howto() {
               </span>
               <br /> <br />
               Meta mask will populate the remaining fields and you should be
-              good to go! If using trust wallet the manual input is as follows;
+              good to go! If using trust wallet the manual input is as follows
               <br />
               <br />
               <span style={{ color: "#f73104" }}>
@@ -103,8 +122,9 @@ function howto() {
             <StaticImage
               width="363"
               style={{ width: "100%" }}
-              src="../../static/mask3.jpeg"
+              src="../../static/AddToken.jpeg"
               alt="A"
+              placeholder="blurred"
             />
           </div>
         </div>
