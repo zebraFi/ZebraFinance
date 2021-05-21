@@ -38,7 +38,7 @@ const chartLegend = [
     color: "#dc3912",
     ele: (
       <>
-        <span>8 million (0.8%)</span> for burn rate at{" "}
+        <span>8 million (0.8%)</span> for Burn Rate at{" "}
         <span>10% per transaction fee</span>
       </>
     ),
