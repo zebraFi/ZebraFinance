@@ -89,12 +89,12 @@ function Whitepaper() {
         pattern="1"
         text={<h3 style={{ fontSize: "4rem" }}>Whitepaper</h3>}
       />
-      <h1 style={{ marginTop: "6rem" }} className="txtGradient2">
+      <h1 style={{ marginTop: "6rem" }} className="2">
         Token breakdown
       </h1>
 
       <img src="/investment.svg" className={styles.money} />
-      <h2 className="txtGradient">1 Billion total supply</h2>
+      <h2 className="gold">1 Billion total supply</h2>
       <hr />
 
       <div className={styles.chartContainer}>

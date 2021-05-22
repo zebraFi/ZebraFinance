@@ -13,7 +13,7 @@ function farm() {
             alignItems: "center",
           }}
         >
-          <h1 className="txtGradient">Coming Soon</h1>
+          <h1 className="gold">Coming Soon</h1>
           <p style={{ color: "black" }}>
             Big things are happening. Stay tuned.
           </p>

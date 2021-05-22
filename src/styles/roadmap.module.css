@@ -5,6 +5,7 @@
 .title{
   font-size: 70px;
   margin: 5rem 0;
+  color: var(--gold);
 }
 .timeline {
   position: relative;
@@ -40,12 +41,12 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  right: -12px;
+  right: -11px;
   top: 15px;
   border-radius: 50%;
   z-index: 1;
   background-color: var(--onyx);
-  box-shadow: inset 0px 17px 10px -13px hsl(36, 48%, 54%);
+  box-shadow: inset 0px 4px 8px hsl(36, 48%, 54%);
 
   /* background-color: rgb(30 30 30 / 90%);
   border-radius: 10px;
@@ -95,7 +96,7 @@
 
 /* Fix the circle for containers on the right side */
 .right .circle {
-  left: -13px;
+  left: -14px;
 }
 
 /* The actual content */

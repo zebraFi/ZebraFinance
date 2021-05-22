@@ -4,7 +4,7 @@ import * as styles from '../styles/poweredby.module.css'
 function PoweredBy() {
   return (
     <div className={styles.container}>
-      <h1 className="txtGradient2" style={{ padding: "1rem" }}>
+      <h1 className="gold" style={{ padding: "1rem" }}>
         Powered by
       </h1>
       <div className={styles.cryptoInfo}>

@@ -7,7 +7,7 @@ const Left = ({ title, body }) => {
     <div className={`${styles.container} ${styles.left}`}>
       <div className={styles.circle} />
       <div className={styles.content}>
-        <h2 className="txtGradient">{title}</h2>
+        <h2 className="gold">{title}</h2>
         {body}
       </div>
     </div>
@@ -18,7 +18,7 @@ const Right = ({ title, body }) => {
     <div className={`${styles.container} ${styles.right}`}>
       <div className={styles.circle} />
       <div className={styles.content}>
-        <h2 className="txtGradient">{title}</h2>
+        <h2 className="gold">{title}</h2>
         {body}
       </div>
     </div>
@@ -45,7 +45,7 @@ function Roadmap() {
   }, [])
   return (
     <div className={styles.mainContainer}>
-      <h2 className={`txtGradient ${styles.title}`}>Roadmap</h2>
+      <h2 className={`${styles.title}`}>Roadmap</h2>
       <div className={styles.timeline}>
         <Left
           title="May 2021"

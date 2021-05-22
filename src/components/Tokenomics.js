@@ -2,9 +2,9 @@ import React, { useEffect, useState, useRef } from "react"
 import * as styles from "../styles/tokenomics.module.css"
 import { useSpring, animated } from "@react-spring/web"
 
-const Card = ({ countStart, sub, src, num }) => {
+const Card = ({ countStart, sub, src, num ,percent=false}) => {
   const props = useSpring({
-    from: { number: num * 0.9, opacity: 0 },
+    from: { number:percent? 0 :num * 0.9, opacity: 0 },
     to: { number: countStart ? num : num * 0.9, opacity: countStart ? 1 : 0 },
     // config: config.molasses,
   })
@@ -30,7 +30,7 @@ const Card = ({ countStart, sub, src, num }) => {
           remainder &&
             (formattedNumber =
               x.toString().slice(0, length) + "," + formattedNumber)
-          return formattedNumber.slice(0, formattedNumber.length - 1)
+          return percent?`${formattedNumber.slice(0, formattedNumber.length - 1)}%`:formattedNumber.slice(0, formattedNumber.length - 1)
         })}
       </animated.h2>
       {sub}
@@ -68,11 +68,10 @@ function Tokenomics() {
         <Card
           countStart={countStart}
           src="/airdrop.svg"
-          num={190000000}
+          num={19}
+          percent={true}
           sub={
             <p>
-              19%
-              <br />
               Multiple Airdrops
             </p>
           }
@@ -80,11 +79,10 @@ function Tokenomics() {
         <Card
           countStart={countStart}
           src="/bullhorn.svg"
-          num={150000000}
+          percent={true}
+          num={15}
           sub={
             <p>
-              15%
-              <br />
               Marketing
             </p>
           }
@@ -93,11 +91,10 @@ function Tokenomics() {
         <Card
           countStart={countStart}
           src="/investment.svg"
-          num={60000000}
+          percent={true}
+          num={6}
           sub={
             <p>
-              6%
-              <br />
               Dev Funds
             </p>
           }
@@ -105,11 +102,10 @@ function Tokenomics() {
         <Card
           countStart={countStart}
           src="/strategic-plan.svg"
-          num={70000000}
+          num={7}
+          percent={true}
           sub={
             <p>
-              7%
-              <br />
               Future Incentives
             </p>
           }
@@ -117,12 +113,11 @@ function Tokenomics() {
         <Card
           countStart={countStart}
           src="/burn.svg"
-          num={200000000}
+          percent={true}
+          num={20}
           sub={
             <p>
-              Burn a total of 20% trailing off at random points
-              <br />
-              (before and after Airdrop){" "}
+              Intermittently burn a total of 20%
             </p>
           }
         />
