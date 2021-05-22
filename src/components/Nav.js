@@ -55,9 +55,9 @@ function Nav({ index }) {
               Farm
             </Link>
           </li>
-          <li style={selectedStyle}>
+          <li >
             <span
-
+  style={selectedStyle}
             // target="_blank"
             // rel="noopener noreferrer"
             // href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xd7de0f4a2547d401dc145f40d76731f06c46ef7f"

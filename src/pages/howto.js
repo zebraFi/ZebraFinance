@@ -12,7 +12,7 @@ function howto() {
           Let's get you started on your journey to the moon 🚀 <br />
           This is a guide to assist in connecting to the Binance smart chain.
         </p>
-        <div className={styles.row}>
+        <div style={{margin:'0 0px -7rem 0px', padding: "8rem 0"}} className={styles.row}>
           <div>
             <h2 className="txtGradient">How To Get Started </h2>
             <p>
@@ -35,7 +35,7 @@ function howto() {
             </a>
           </div>
         </div>
-
+    <hr/>
         <div className={styles.row}>
           <div>
             <h2 className="txtGradient">RPC Setup for MetaMask </h2>
@@ -73,7 +73,7 @@ function howto() {
             />
           </div>
         </div>
-
+        <hr/>
         <div className={styles.row}>
           <div>
             <h2 className="txtGradient">Ensure Network Selection </h2>
@@ -91,6 +91,7 @@ function howto() {
             />
           </div>
         </div>
+        <hr/>
         <div className={styles.row}>
           <div>
             <h2 className="txtGradient">Adding ZeebraFinance Token to your wallet </h2>

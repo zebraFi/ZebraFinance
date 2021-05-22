@@ -16,91 +16,54 @@ const chartColors = [
   "#1c21b5",
 ]
 const chartLegend = [
-  {
-    color: "#bf7300",
-    ele: (
-      <>
-        <span>80 million (8%)</span> to be distributed at <span>presale</span>{" "}
-        (Purchasers must purchase <span>Min:0.5BNB</span> and{" "}
-        <span>Max:1BNB</span>)
-      </>
-    ),
-  },
-  {
-    color: "#119618",
-    ele: (
-      <>
-        <span>57.6 million (5.76%)</span>to the LP
-      </>
-    ),
-  },
-  {
-    color: "#dc3912",
-    ele: (
-      <>
-        <span>8 million (0.8%)</span> for Burn Rate at{" "}
-        <span>10% per transaction fee</span>
-      </>
-    ),
-  },
-  {
-    color: "#0099c6",
-    ele: (
-      <>
-        <span>1.6 million (1.6%)</span> for Fees
-      </>
-    ),
-  },
-  {
-    color: "#00ffc4",
-    ele: (
-      <>
-        <span>7 million (0.7%)</span> Presale Airdrop
-      </>
-    ),
-  },
-  {
-    color: "#ff69b4",
-    ele: (
-      <>
-        <span>6 million (0.6%)</span> Marketing Airdrop
-      </>
-    ),
-  },
-  {
-    color: "#810081",
-    ele: (
-      <>
-        <span>250 million (25%)</span> Marketing (multisig wallet, 3 member
-        marketing team)
-      </>
-    ),
-  },
-  {
-    color: "#bc3965",
-    ele: (
-      <>
-        <span>100 million (10%)</span> Dev Funds (multisig 3 signers. To be used
-        to pay Devs based on future work)
-      </>
-    ),
-  },
-  {
-    color: "#581515",
-    ele: (
-      <>
-        <span>120 million (12%)</span> Future incentives
-      </>
-    ),
-  },
-  {
-    color: "#1c21b5",
-    ele: (
-      <>
-        <span>120 million (12%)</span> in Team Tokens
-      </>
-    ),
-  },
+  <>
+    <span>7 million (0.7%)</span> Presale Airdrop
+  </>,
+  <>
+    <span>200 million (20%)</span> Burn
+  </>,
+  <>
+    <span>6 million (0.6%)</span> Marketing Airdrop
+  </>,
+
+  <>
+    <span>250 million (25%)</span> Marketing (multisig wallet, 3 member
+    marketing team. Decisions require a full team vote)
+  </>,
+  <>
+    <span>100 million (10%)</span> Dev Funds (multisig 3 signers. To be used to
+    pay Devs based on future work)
+  </>,
+  <>
+    <span>120 million (12%)</span> Future incentives
+  </>,
+  <>
+    <span>4 million (0.4%)</span> Web Development
+  </>,
+  <>
+    <span>120 million (12%)</span> in Team Tokens
+  </>,
+  <>
+    <span>147.2 million (14.7%)</span> for IDO(To raise <span>80BNB</span>)
+    <ul className={styles.info}>
+      <li>
+        <span>80 million (8%)</span> to be distributed at Presale
+      </li>
+      <li>
+        <span>57.6 million (5.76%)</span> to the LP
+      </li>
+      <li>
+        <span>8 million (0.8%)</span> for Burn Rate at <span>10% </span>per
+        transaction fee
+      </li>
+      <li>
+        <span>1.6 million (0.16%)</span> for fees
+      </li>
+    </ul>
+  </>,
+  <>
+    <span>45.8 million (4.58%)</span> Remaining
+  </>,
 ]
 function Whitepaper() {
   const status = useScript("https://www.gstatic.com/charts/loader.js")
@@ -129,9 +92,11 @@ function Whitepaper() {
       <h1 style={{ marginTop: "6rem" }} className="txtGradient2">
         Token breakdown
       </h1>
+
       <img src="/investment.svg" className={styles.money} />
       <h2 className="txtGradient">1 Billion total supply</h2>
       <hr />
+
       <div className={styles.chartContainer}>
         <div className={styles.chart} id="chart_div"></div>
         <ul className={styles.pieTag}>
@@ -139,10 +104,10 @@ function Whitepaper() {
             return (
               <li key={index}>
                 <div
-                  style={{ backgroundColor: legend.color }}
+                  style={{ backgroundColor: chartColors[index] }}
                   className={styles.disc}
                 />
-                {legend.ele}
+                {legend}
               </li>
             )
           })}
@@ -150,23 +115,8 @@ function Whitepaper() {
       </div>
       <hr />
       <div className={styles.container}>
-        <h4 style={{ textAlign: "left" }}>
-          <span>147.2 Million</span> tokens will be used to raise{" "}
-          <span>80BNB</span> at IDO. These are utilised as follows:
-        </h4>
-        <ul className={styles.info}>
-          <li>
-            <span>70%</span> Locked for liquidity
-          </li>
-          <li>
-            <span>20%</span> for Marketing
-          </li>
-          <li>
-            <span>10%</span> for Buyback
-          </li>
-        </ul>
-        <h2>Total allocation for above: 954.2 million (95.42%)</h2>
-        <h2>Remainder after allocation: 45.8 million (4.58%)</h2>
+        <h2>Total allocation for above: 954.2 Million (95.42%)</h2>
+        <h2>Remainder after allocation: 45.8 Million (4.58%)</h2>
       </div>
     </Layout>
   )
@@ -188,18 +138,16 @@ function drawChart() {
   data.addColumn("string", "Topping")
   data.addColumn("number", "Slices")
   data.addRows([
-    ["Burn rate", 8000000],
-    ["Presale", 80000000],
-    ["Liquidity Pool", 57600000],
-
-    ["Marketing", 250000000],
-    ["Fees", 1600000],
-    ["Dev Funds", 100000000],
-
     ["Presale Airdrop", 7000000],
-    ["Future Incentives", 120000000],
+    ["Burn", 200000000],
     ["Marketing Airdrop", 6000000],
+    ["Marketing", 250000000],
+    ["Dev Funds", 100000000],
+    ["Future Incentives", 120000000],
+    ["Web Development", 4000000],
     ["Team Tokens", 120000000],
+    ["IDO", 147200000],
+    ["Remainder", 45800000],
   ])
 
   // Set chart options
@@ -217,13 +165,13 @@ function drawChart() {
     colors: chartColors,
     fontSize: 16,
     slices: {
-      0: { offset: 0.1 },
+      0: { offset: 0.15 },
       1: { offset: 0.1 },
-      2: { offset: 0.1 },
+      2: { offset: 0.15 },
       3: { offset: 0.1 },
       4: { offset: 0.1 },
       5: { offset: 0.1 },
-      6: { offset: 0.1 },
+      6: { offset: 0.15 },
       7: { offset: 0.1 },
       8: { offset: 0.1 },
       9: { offset: 0.1 },
