@@ -218,7 +218,23 @@ blockquote {
 .purple {
   color: #a23594 !important;
 }
-
+.goldBtn, .disabledGoldBtn{
+  background-color: var(--gold);
+  border-radius:2000px;
+  border:none;
+  color: var(--zebraWhite);
+  padding: 20px;
+  font-size: 16px;
+  transition: transform .3s ease;
+  cursor: pointer;
+}
+.goldBtn:hover{
+  transform: scale(1.1);
+}
+.disabledGoldBtn{
+  opacity: .5;
+  pointer-events: none;
+}
 @media (max-width: 568px) {
   html {
     -ms-text-size-adjust: 100%;
