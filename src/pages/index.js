@@ -1,6 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 import Landing from "../components/Landing"
 import Roadmap from "../components/Roadmap"
 import Tokenomics from "../components/Tokenomics"
@@ -14,13 +12,12 @@ const IndexPage = () => (
     <Landing
       text={
         <h3>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          World first 'zp' decentralised finance application
         </h3>
       }
     />
     <Tokenomics/>
-    <Roadmap />
+    {/* <Roadmap /> */}
     <PoweredBy />
   </Layout>
 )
