@@ -5,7 +5,7 @@ module.exports = {
     title: `Zebra Finance`,
     description: `Zebra Finance`,
     author: `@superuser`,
-    siteUrl: "https://missionmilk.in/",
+    siteUrl: "https://zebrafinance.netlify.app/",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
