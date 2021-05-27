@@ -13,7 +13,6 @@ const chartColors = [
   "#ff9700",
   "#ffc570",
   "#ffdead",
-  "#1c21b5",
 ]
 const chartLegend = [
   <>
