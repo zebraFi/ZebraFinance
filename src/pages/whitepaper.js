@@ -4,15 +4,15 @@ import Landing from "../components/Landing"
 import Layout from "../components/layout"
 
 const chartColors = [
-  "#dc3912",
-  "#bf7300",
-  "#119618",
-  "#810081",
-  "#0099c6",
-  "#bc3965",
-  "#00ffc4",
-  "#581515",
-  "#ff69b4",
+  "#fbbb5d",
+  "#8d6f3f",
+  "#211b12",
+  "#3d3529",
+  "#b57a25",
+  "#734b0a",
+  "#ff9700",
+  "#ffc570",
+  "#ffdead",
   "#1c21b5",
 ]
 const chartLegend = [
@@ -38,28 +38,11 @@ const chartLegend = [
     <span>120 million (12%)</span> Future incentives
   </>,
   <>
-    <span>4 million (0.4%)</span> Web Development
-  </>,
-  <>
     <span>120 million (12%)</span> in Team Tokens
   </>,
   <>
     <span>147.2 million (14.7%)</span> for IDO(To raise <span>80BNB</span>)
-    <ul className={styles.info}>
-      <li>
-        <span>80 million (8%)</span> to be distributed at Presale
-      </li>
-      <li>
-        <span>57.6 million (5.76%)</span> to the LP
-      </li>
-      <li>
-        <span>8 million (0.8%)</span> for Burn Rate at <span>10% </span>per
-        transaction fee
-      </li>
-      <li>
-        <span>1.6 million (0.16%)</span> for fees
-      </li>
-    </ul>
+   
   </>,
   <>
     <span>45.8 million (4.58%)</span> Remaining
@@ -144,7 +127,6 @@ function drawChart() {
     ["Marketing", 250000000],
     ["Dev Funds", 100000000],
     ["Future Incentives", 120000000],
-    ["Web Development", 4000000],
     ["Team Tokens", 120000000],
     ["IDO", 147200000],
     ["Remainder", 45800000],

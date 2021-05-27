@@ -2,9 +2,9 @@ import React, { useEffect, useState, useRef } from "react"
 import * as styles from "../styles/tokenomics.module.css"
 import { useSpring, animated } from "@react-spring/web"
 
-const Card = ({ countStart, sub, src, num ,percent=false}) => {
+const Card = ({ countStart, sub, src, num, percent = false }) => {
   const props = useSpring({
-    from: { number:percent? 0 :num * 0.9, opacity: 0 },
+    from: { number: percent ? 0 : num * 0.9, opacity: 0 },
     to: { number: countStart ? num : num * 0.9, opacity: countStart ? 1 : 0 },
     // config: config.molasses,
   })
@@ -16,21 +16,25 @@ const Card = ({ countStart, sub, src, num ,percent=false}) => {
         className={styles.content}
       >
         {props.number.to(x => {
-          let length = (Math.log(x) * Math.LOG10E + 1) | 0
-          let remainder = length % 3 !== 0
-          let Ngroups = Math.floor(length / 3)
-          let formattedNumber = ""
-          while (Ngroups >= 1) {
-            formattedNumber =
-              x.toString().slice(length - 3, length) + "," + formattedNumber
-            x = Math.floor(x / 1000)
-            length -= 3
-            Ngroups -= 1
+          if (percent) {
+            return `${x.toFixed(1)}%`
+          } else {
+            let length = (Math.log(x) * Math.LOG10E + 1) | 0
+            let remainder = length % 3 !== 0
+            let Ngroups = Math.floor(length / 3)
+            let formattedNumber = ""
+            while (Ngroups >= 1) {
+              formattedNumber =
+                x.toString().slice(length - 3, length) + "," + formattedNumber
+              x = Math.floor(x / 1000)
+              length -= 3
+              Ngroups -= 1
+            }
+            remainder &&
+              (formattedNumber =
+                x.toString().slice(0, length) + "," + formattedNumber)
+            return `${formattedNumber.slice(0, formattedNumber.length - 1)}`
           }
-          remainder &&
-            (formattedNumber =
-              x.toString().slice(0, length) + "," + formattedNumber)
-          return percent?`${formattedNumber.slice(0, formattedNumber.length - 1)}%`:formattedNumber.slice(0, formattedNumber.length - 1)
         })}
       </animated.h2>
       {sub}
@@ -65,62 +69,52 @@ function Tokenomics() {
           num={1000000000}
           sub={<p>Total</p>}
         />
-        <Card
-          countStart={countStart}
-          src="/airdrop.svg"
-          num={19}
-          percent={true}
-          sub={
-            <p>
-              Multiple Airdrops
-            </p>
-          }
-        />
-        <Card
+         <Card
           countStart={countStart}
           src="/bullhorn.svg"
           percent={true}
-          num={15}
-          sub={
-            <p>
-              Marketing
-            </p>
-          }
+          num={25}
+          sub={<p>Marketing</p>}
         />
-
-        <Card
-          countStart={countStart}
-          src="/investment.svg"
-          percent={true}
-          num={6}
-          sub={
-            <p>
-              Dev Funds
-            </p>
-          }
-        />
-        <Card
-          countStart={countStart}
-          src="/strategic-plan.svg"
-          num={7}
-          percent={true}
-          sub={
-            <p>
-              Future Incentives
-            </p>
-          }
-        />
-        <Card
+ <Card
           countStart={countStart}
           src="/burn.svg"
           percent={true}
           num={20}
           sub={
-            <p>
-              Intermittently burn a total of 20%
-            </p>
+            <p>20% of total supply burned in the first 8 weeks after launch</p>
           }
         />
+        <Card
+          countStart={countStart}
+          src="/IDO.svg"
+          num={14.7}
+          percent={true}
+          sub={<p>IDO</p>}
+        />
+        <Card
+          countStart={countStart}
+          src="/team.svg"
+          num={12}
+          percent={true}
+          sub={<p>Team Tokens</p>}
+        />
+        <Card
+          countStart={countStart}
+          src="/strategic-plan.svg"
+          num={12}
+          percent={true}
+          sub={<p>Future Incentives</p>}
+        />
+        <Card
+          countStart={countStart}
+          src="/investment.svg"
+          percent={true}
+          num={10}
+          sub={<p>Dev Funds</p>}
+        />
+       
+       
         {/* <Card title="190,000,000" sub="Airdrop" /> */}
       </div>
     </div>

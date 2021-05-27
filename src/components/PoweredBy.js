@@ -9,18 +9,6 @@ function PoweredBy() {
       </h1>
       <div className={styles.cryptoInfo}>
         <div className={styles.cryptoCard}>
-          <img src="/binance.svg" />
-          <p
-            style={{
-              fontWeight: "800",
-              fontSize: "2.5rem",
-              padding: "4rem 0",
-            }}
-          >
-            Binance
-          </p>
-        </div>
-        <div className={styles.cryptoCard}>
           <img src="/pancake.svg" />
           <p
             style={{
