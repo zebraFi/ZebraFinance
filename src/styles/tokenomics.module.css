@@ -47,11 +47,11 @@
   height: 10rem;
   width: 10rem;
 }
-/* @media only screen and (min-width: 615px) { 
-    .row{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-direction: row;
-    }
-} */
+@media only screen and (min-width: 992px) {
+  .card {
+    /* margin: 1rem; */
+    padding: 2rem 0.5rem;
+    width: 25vw;
+    /* background-color: blanchedalmond; */
+  }
+}
