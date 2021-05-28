@@ -5,7 +5,7 @@ function PoweredBy() {
   return (
     <div className={styles.container}>
       <h1 className="gold" style={{ padding: "1rem" }}>
-        Powered by
+        Powered By
       </h1>
       <div className={styles.cryptoInfo}>
         <div className={styles.cryptoCard}>
@@ -18,7 +18,7 @@ function PoweredBy() {
             }}
           >
             {" "}
-            Pancake swap
+            Pancake Swap
           </p>
         </div>
       </div>

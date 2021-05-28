@@ -20,7 +20,6 @@ function Footer() {
           >
             {" "}
             <img
-              style={{ height: "5rem", width: "5rem" }}
               src="/telegram.svg"
             />
           </a>
@@ -31,8 +30,17 @@ function Footer() {
           >
             {" "}
             <img
-              style={{ height: "5rem", width: "5rem" }}
               src="/twitter.svg"
+            />
+          </a>
+          <a
+            href="https://zebradfi.medium.com/introducing-zebra-finance-zfi-d9694b83ce1e"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            <img
+              src="/medium.svg"
             />
           </a>
         </div>

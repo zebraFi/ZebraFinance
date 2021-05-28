@@ -37,10 +37,10 @@ const chartLegend = [
     <span>120 million (12%)</span> Future incentives
   </>,
   <>
-    <span>120 million (12%)</span> in Team Tokens
+    <span>120 million (12%)</span> Team Tokens
   </>,
   <>
-    <span>147.2 million (14.7%)</span> for IDO(To raise <span>80BNB</span>)
+    <span>147.2 million (14.7%)</span> IDO(To raise <span>80BNB</span>)
    
   </>,
   <>
@@ -63,16 +63,16 @@ function Whitepaper() {
   }, [status])
   return (
     <Layout
-      title="Zebra Finanace Whitepaper"
+      title="Zebra Finanace Tokenomics"
       description="Our strategy for success"
       index={0}
     >
       <Landing
         pattern="1"
-        text={<h3 style={{ fontSize: "4rem" }}>Whitepaper</h3>}
+        text={<h3 style={{ fontSize: "4rem" }}>Tokenomics</h3>}
       />
       <h1 style={{ marginTop: "6rem" }} className="2">
-        Token breakdown
+        Token Breakdown
       </h1>
 
       <img src="/investment.svg" className={styles.money} />

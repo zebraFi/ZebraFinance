@@ -58,7 +58,7 @@
   transform: translateY(8px) rotate(45deg);
 }
 
-@media only screen and (min-width: 568px) {
+@media only screen and (min-width: 700px) {
   .openIcon,
   .closeIcon {
     display: none;

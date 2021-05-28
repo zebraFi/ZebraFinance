@@ -23,23 +23,22 @@ function Nav({ index }) {
   return (
     <div className={styles.container}>
       <nav className={styles.innerContainer}>
-        <div className={styles.logoContainer}>
-          <Link to="/">
-            <img src="/Logo.svg" className={styles.logo} />
-          </Link>
-        </div>
-
-        {/* <img className={styles.logo} src="/Logo.svg" /> */}
+        <Link className={styles.logo} to="/">
+          <img src="/Logo.svg"  />
+        </Link>
         <ul className={styles.content}>
-          <li>
+          <li className={styles.navLink}>
             <Link
               style={index === 0 ? selectedStyle : unSelectedStyle}
-              to="/whitepaper"
+              to="/tokenomics"
             >
-              WhitePaper
+              <span>
+              Tokenomics
+              </span>
+              
             </Link>
           </li>
-          <li>
+          <li className={styles.navLink}>
             <Link
               style={index === 1 ? selectedStyle : unSelectedStyle}
               to="/howto"
@@ -47,7 +46,7 @@ function Nav({ index }) {
               How to buy
             </Link>
           </li>
-          <li>
+          <li className={styles.navLink}>
             <Link
               style={index === 2 ? selectedStyle : unSelectedStyle}
               to="/farm"
@@ -57,13 +56,39 @@ function Nav({ index }) {
           </li>
           <li >
             <span
-  style={selectedStyle}
-            // target="_blank"
-            // rel="noopener noreferrer"
-            // href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xd7de0f4a2547d401dc145f40d76731f06c46ef7f"
+              style={{ fontSize: "16px",fontFamily: "Exo 2",cursor:'pointer', ...selectedStyle }}
+              // target="_blank"
+              // rel="noopener noreferrer"
+              // href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xd7de0f4a2547d401dc145f40d76731f06c46ef7f"
             >
               Trade
             </span>
+          </li>
+          <li className={styles.socials}>
+            <a
+              href="https://t.me/ZebraDefi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              <img src="/telegram.svg" />
+            </a>
+            <a
+              href="https://twitter.com/FinanceZebra?s=20"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              <img src="/twitter.svg" />
+            </a>
+            <a
+              href="https://zebradfi.medium.com/introducing-zebra-finance-zfi-d9694b83ce1e"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              <img src="/medium.svg" />
+            </a>
           </li>
         </ul>
         <Hamburger collapse={collapse} setCollapse={setCollapse} />
@@ -75,15 +100,15 @@ function Nav({ index }) {
         }}
         className={styles.collapseContent}
       >
-        <li>
+        <li className={styles.navLink}>
           <Link
             style={index === 0 ? selectedStyle : unSelectedStyle}
-            to="/whitepaper"
+            to="/tokenomics"
           >
-            WhitePaper
+            Tokenomics
           </Link>
         </li>
-        <li>
+        <li className={styles.navLink}>
           <Link
             style={index === 1 ? selectedStyle : unSelectedStyle}
             to="/howto"
@@ -91,15 +116,15 @@ function Nav({ index }) {
             How to buy
           </Link>
         </li>
-        <li>
-            <Link
-              style={index === 2 ? selectedStyle : unSelectedStyle}
-              to="/farm"
-            >
-              Farm
-            </Link>
-          </li>
-        <li style={selectedStyle}>
+        <li className={styles.navLink}>
+          <Link
+            style={index === 2 ? selectedStyle : unSelectedStyle}
+            to="/farm"
+          >
+            Farm
+          </Link>
+        </li>
+        <li style={{ fontSize: "16px",fontFamily: "Exo 2",cursor:'pointer', ...selectedStyle }}>
           <span
           // target="_blank"
           // rel="noopener noreferrer"
@@ -107,6 +132,32 @@ function Nav({ index }) {
           >
             Trade
           </span>
+        </li>
+        <li className={styles.socials}>
+          <a
+            href="https://t.me/ZebraDefi"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            <img src="/telegram.svg" />
+          </a>
+          <a
+            href="https://twitter.com/FinanceZebra?s=20"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            <img src="/twitter.svg" />
+          </a>
+          <a
+            href="https://zebradfi.medium.com/introducing-zebra-finance-zfi-d9694b83ce1e"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            <img src="/medium.svg" />
+          </a>
         </li>
       </animated.ul>
     </div>

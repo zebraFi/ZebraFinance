@@ -22,8 +22,8 @@
   flex: 1;
 }
 .logo {
-  height: 7rem;
-  width: 7rem;
+  height: 5.5rem;
+  width: 5.5rem;
 }
 .links {
   flex: 1;
@@ -31,6 +31,10 @@
   align-items: center;
   padding: 0 0 0 0;
   display: flex;
+}
+.links img{
+  height: 4rem;
+  width: 4rem;
 }
 .container p {
   padding: 4rem 0 2rem 0;

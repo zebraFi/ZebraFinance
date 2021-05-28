@@ -9,7 +9,7 @@
   border-bottom: 0.1rem var(--gold) solid;
 }
 .innerContainer {
-  width: 85%;
+  width: 90%;
   height: 100%;
   position: relative;
   margin: 0 auto;
@@ -19,18 +19,16 @@
   align-items: center;
   z-index: var(--nav-Zindex);
 }
-.logoContainer {
-  flex: 1;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
+
 .logo {
+  flex: 1;
+}
+.logo img{
   height: 7rem;
 }
 .content,
 .collapseContent {
-  flex: 4;
+  flex: 6;
   list-style: none;
   display: flex;
   margin: 0;
@@ -45,7 +43,7 @@
   width: 5rem;
 }
 .content {
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 0 0 0 0;
   display: none;
@@ -59,8 +57,8 @@
   z-index: var(--nav-drop-z);
   border-bottom: 0.1rem var(--gold) solid;
 }
-.content li,
-.collapseContent li {
+.navLink {
+  /* flex: 1; */
   position: relative;
   font-size: 16px;
   font-weight: 800;
@@ -68,29 +66,43 @@
   color: white;
   display: inline-block;
   cursor: pointer;
+  text-transform: capitalize;
+  text-align: center;
+  transition: transform .3s ease-out;
 }
-.collapseContent li {
+.collapseContent .navLink {
   margin: 2rem 0;
 }
-.content li::before,
-.collapseContent li::before{
-  content: '';
+.socials img {
+  height: 3rem;
+  width: 3rem;
+  margin: 0 0.5rem;
+}
+.collapseContent .socials{
+  margin: 2rem  0 1rem 0;
+}
+.collapseContent .socials img{
+  margin: 0 1.5rem;
+}
+.navLink::before {
+  content: "";
   z-index: -1;
   position: absolute;
   /* background-color: red; */
   top: 0;
   left: 50%;
-  transform: translate(-50%,10%) scaleX(0);
-  transition:transform .2s ease;
+  transform: translate(-50%, 10%) scaleX(0);
+  transition: transform 0.2s ease;
   width: 80%;
   height: 100%;
   border-bottom: 2px solid var(--gold);
 }
-.content li:hover::before,
-.collapseContent li:hover::before {
-  transform: translate(-50%,10%) scaleX(1);
+.navLink:hover::before {
+  transform: translate(-50%, 10%) scaleX(1);
 }
-@media only screen and (min-width: 568px) {
+
+
+@media only screen and (min-width: 700px) {
   .content {
     display: flex;
   }
