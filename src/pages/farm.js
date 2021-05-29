@@ -50,22 +50,33 @@ const Tick = () => {
   )
 }
 
-const detect = async (maskConnect, setMaskConnect) => {
-  const provider = await detectEthereumProvider({ mustBeMetaMask: true })
-  // provider === window.ethereum
-  if (provider) {
-    // console.log("Ethereum successfully detected!")
+const getBlockchain = (maskconnect, setMaskConnect) =>
+  new Promise(async (resolve, reject) => {
+    // console.log("HEYYAAA", maskconnect)
     setMaskConnect(state => {
       return {
         ...state,
-        connect: false,
-        installed: true,
-        detectingMetaMask: false,
+        connect: true,
+        detectingMetaMask: true,
+        loading: true,
       }
     })
-    try {
-      if (!maskConnect.pending) {
+    let provider = await detectEthereumProvider({ mustBeMetaMask: true })
+    if (provider) {
+      //Metamask detected
+      setMaskConnect(state => {
+        return {
+          ...state,
+          connect: false,
+          installed: true,
+          detectingMetaMask: false,
+        }
+      })
+      try {
+        //Ask user to connect their account
+        //provider = abstraction to allow connection to the Ethereum Network (read-only access)
         await provider.request({ method: "eth_requestAccounts" })
+        //Get the networkId from metamask
         setMaskConnect({
           connect: false,
           loading: false,
@@ -74,58 +85,15 @@ const detect = async (maskConnect, setMaskConnect) => {
           rejected: false,
           installed: true,
         })
+        // resolve(testContract)
+        resolve("DOne")
+        return
+      } catch (err) {
+        reject({ code: err?.code })
       }
-    } catch (err) {
-      if (err?.code === -32002) {
-        //When a connection is already open
-        setMaskConnect(state => {
-          return {
-            ...state,
-            connect: false,
-            loading: false,
-            pending: true,
-            installed: true,
-          }
-        })
-      } else if (err?.code === 4001) {
-        //When connection is rejected
-        setMaskConnect(state => {
-          return {
-            success: false,
-            connect: false,
-            loading: false,
-            pending: false,
-            rejected: true,
-            installed: true,
-          }
-        })
-      }
-
-      return
     }
-
-    // From now on, this should always be true:
-
-    // Access the decentralized web!
-
-    // Legacy providers may only have ethereum.sendAsync
-    //   const chainId = await provider.request({
-    //     method: 'eth_chainId'
-    //   })
-  } else {
-    // if the provider is not detected, detectEthereumProvider resolves to null
-    setMaskConnect(state => {
-      return {
-        ...state,
-        connect: false,
-        installed: false,
-        detectingMetaMask: false,
-      }
-    })
-    // console.error("Please install MetaMask!")
-  }
-  return provider
-}
+    reject({ code: 404 })
+  })
 
 function Farm() {
   const [maskConnect, setMaskConnect] = useState({
@@ -145,8 +113,50 @@ function Farm() {
     installed: true,
   })
   //If button is clicked initiate the connect request
-  maskConnect.connect && detect(maskConnect, setMaskConnect)
-
+  // maskConnect.connect && detect(maskConnect, setMaskConnect)
+  // maskConnect.connect && getBlockchain(maskConnect, setMaskConnect)
+  const init = async () => {
+    try {
+      await getBlockchain(maskConnect, setMaskConnect)
+    } catch (err) {
+      if (err?.code === -32002) {
+        //When a connection is already open
+        setMaskConnect(state => {
+          return {
+            ...state,
+            connect: false,
+            loading: false,
+            pending: true,
+            installed: true,
+          }
+        })
+        // console.log("Open Connection")
+      } else if (err?.code === 4001) {
+        //When connection is rejected
+        setMaskConnect(state => {
+          return {
+            success: false,
+            connect: false,
+            loading: false,
+            pending: false,
+            rejected: true,
+            installed: true,
+          }
+        })
+      } else if (err.code === 404) {
+        // if the provider is not detected, detectEthereumProvider resolves to null
+        setMaskConnect(state => {
+          return {
+            ...state,
+            connect: false,
+            installed: false,
+            detectingMetaMask: false,
+          }
+        })
+      }
+    }
+  }
+  // console.log("ROLADED")
   return (
     <Layout title="Farming ZebraFinance" index={2}>
       <div
@@ -222,16 +232,7 @@ function Farm() {
               : `goldBtn`
           }
           disabled={maskConnect.pending ? true : false}
-          onClick={() =>
-            setMaskConnect(state => {
-              return {
-                ...state,
-                connect: true,
-                detectingMetaMask: true,
-                loading: true,
-              }
-            })
-          }
+          onClick={() => init()}
         >
           {maskConnect.rejected ? "Restart" : "Connect"}
         </button>

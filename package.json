@@ -1,12 +1,13 @@
 {
   "name": "ZebraFinance",
   "private": true,
-  "description": "WORLD FIRST ZP DECENTRALISED FINANCE APPLICATION",
+  "description": "THE WORLD's FIRST ZP DECENTRALISED FINANCE APPLICATION",
   "version": "0.1.0",
   "author": "@superuser",
   "dependencies": {
     "@metamask/detect-provider": "^1.2.0",
     "@react-spring/web": "^9.1.2",
+    "ethers": "^5.2.0",
     "gatsby": "^3.4.1",
     "gatsby-plugin-google-gtag": "^3.5.0",
     "gatsby-plugin-image": "^1.4.0",

@@ -12,7 +12,7 @@ const IndexPage = () => (
     <Landing
       text={
         <h3>
-          World&nbsp; first 'zp' decentralised finance application
+         the World's first 'zp' decentralised finance application
         </h3>
       }
     />
