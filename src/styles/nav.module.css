@@ -43,7 +43,7 @@
   width: 5rem;
 }
 .content {
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 0 0 0 0;
   display: none;
@@ -100,7 +100,11 @@
 .navLink:hover::before {
   transform: translate(-50%, 10%) scaleX(1);
 }
-
+.socialsLg{
+  display: none;
+  flex: 1;
+  justify-content: flex-end;
+}
 
 @media only screen and (min-width: 700px) {
   .content {
@@ -109,5 +113,8 @@
   .collapseContent,
   .toggle {
     display: none;
+  }
+  .socialsLg{
+    display: flex;
   }
 }

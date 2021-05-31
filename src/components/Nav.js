@@ -64,7 +64,8 @@ function Nav({ index }) {
               Trade
             </span>
           </li>
-          <li className={styles.socials}>
+        </ul>
+        <div className={`${styles.socials} ${styles.socialsLg}`}>
             <a
               href="https://t.me/ZebraDefi"
               target="_blank"
@@ -89,8 +90,7 @@ function Nav({ index }) {
               {" "}
               <img src="/medium.svg" />
             </a>
-          </li>
-        </ul>
+          </div>
         <Hamburger collapse={collapse} setCollapse={setCollapse} />
       </nav>
 
