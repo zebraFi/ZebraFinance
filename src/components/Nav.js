@@ -27,7 +27,7 @@ function Nav({ index }) {
           <img src="/Logo.svg"  />
         </Link>
         <ul className={styles.content}>
-          <li className={styles.navLink}>
+          {/* <li className={styles.navLink}>
             <Link
               style={index === 0 ? selectedStyle : unSelectedStyle}
               to="/tokenomics"
@@ -37,7 +37,7 @@ function Nav({ index }) {
               </span>
               
             </Link>
-          </li>
+          </li> */}
           <li className={styles.navLink}>
             <Link
               style={index === 1 ? selectedStyle : unSelectedStyle}
@@ -100,14 +100,14 @@ function Nav({ index }) {
         }}
         className={styles.collapseContent}
       >
-        <li className={styles.navLink}>
+        {/* <li className={styles.navLink}>
           <Link
             style={index === 0 ? selectedStyle : unSelectedStyle}
             to="/tokenomics"
           >
             Tokenomics
           </Link>
-        </li>
+        </li> */}
         <li className={styles.navLink}>
           <Link
             style={index === 1 ? selectedStyle : unSelectedStyle}
