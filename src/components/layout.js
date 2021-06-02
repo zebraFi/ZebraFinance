@@ -13,7 +13,7 @@ import SEO from "./seo"
 
 import Footer from "./Footer"
 
-const Layout = ({ children, index, description, title,pathname }) => {
+const Layout = ({ children, index, description, title,pathname,displayCard=false }) => {
   const data = useStaticQuery(graphql`
     query {
       socials: file(
@@ -42,7 +42,7 @@ const Layout = ({ children, index, description, title,pathname }) => {
       //   padding: `0 1.0875rem 1.45rem`,
       // }}
       >
-        <SEO pathname={pathname} description={description} title={title} image={data.socials.childImageSharp.resize} />
+        <SEO displayCard={displayCard} pathname={pathname} description={description} title={title} image={data.socials.childImageSharp.resize} />
         <Nav index={index} />
         <main style={{ margin: "80px 0 0 0" }}>{children}</main>
         <Footer />
