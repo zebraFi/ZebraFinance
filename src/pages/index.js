@@ -8,7 +8,7 @@ import Layout from "../components/layout"
 
 
 const IndexPage = (props) => (
-  <Layout displayCard pathname={props.location.pathname} title="Zebra Finanace Homepage" description="Zebra Finance is the world's first decentralised finance application.">
+  <Layout displayCard pathname={props.location.pathname} title="Zebra Finanace Homepage" description="Zebra Finance is the world's first 'zp' decentralised finance application.">
     <Landing
       text={
         <h3>
