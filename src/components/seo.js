@@ -104,6 +104,10 @@ function Seo({ description, lang, meta, title, image: metaImage, pathname }) {
                   name: "twitter:card",
                   content: "summary_large_image",
                 },
+                {
+                  name: "twitter:image",
+                  content: image,
+                },
               ]
             : [
                 {
