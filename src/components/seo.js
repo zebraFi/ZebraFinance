@@ -105,8 +105,8 @@ function Seo({ description, lang, meta, title, image: metaImage, pathname }) {
                   content: "summary_large_image",
                 },
                 {
-                  name: "twitter:image",
-                  content: image,
+                  name: "twitter:site",
+                  content: "@FinanceZebra",
                 },
               ]
             : [
