@@ -2,9 +2,9 @@ import React from "react"
 import * as styles from "../styles/howto.module.css"
 import Layout from "../components/layout"
 
-function howto() {
+function howto(props) {
   return (
-    <Layout title="Zebra Finanace Homepage" index={1}>
+    <Layout pathname={props.location.pathname} title="Zebra Finanace how to buy" index={1}>
       <div className={styles.container}>
         <h2 className="gold">Connecting to Binance smart chain</h2>
         <p>

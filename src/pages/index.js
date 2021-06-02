@@ -7,8 +7,8 @@ import PoweredBy from "../components/PoweredBy"
 import Layout from "../components/layout"
 
 
-const IndexPage = () => (
-  <Layout title="Zebra Finanace Homepage" description="Zebra Finance">
+const IndexPage = (props) => (
+  <Layout pathname={props.location.pathname} title="Zebra Finanace Homepage" description="Zebra Finance">
     <Landing
       text={
         <h3>

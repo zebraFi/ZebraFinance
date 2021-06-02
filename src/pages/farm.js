@@ -95,7 +95,7 @@ const getBlockchain = (maskconnect, setMaskConnect) =>
     reject({ code: 404 })
   })
 
-function Farm() {
+function Farm(props) {
   const [maskConnect, setMaskConnect] = useState({
     //TO start connection process
     connect: false,
@@ -158,7 +158,7 @@ function Farm() {
   }
   // console.log("ROLADED")
   return (
-    <Layout title="Farming ZebraFinance" index={2}>
+    <Layout pathname={props.location.pathname} title="Farming ZebraFinance" index={2}>
       <div
         style={{
           minHeight: "80vh",

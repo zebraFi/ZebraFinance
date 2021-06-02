@@ -6,6 +6,7 @@ module.exports = {
     description: `WORLD FIRST ZP DECENTRALISED FINANCE APPLICATION`,
     author: `@superuser`,
     siteUrl: "https://zebrafinance.app/",
+    keywords:["Zebra Finance","Token","Defi","bsc","binance","blockchain","decentralised","pancakeswap"]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -42,6 +43,14 @@ module.exports = {
         display: `minimal-ui`,
         icon: `static/Logo.svg`, // This path is relative to the root of the site.
       },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: "./static",
+      },
+      __key: "images",
     },
     {
       resolve: `gatsby-plugin-postcss`,

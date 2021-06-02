@@ -41,17 +41,16 @@ const chartLegend = [
   </>,
   <>
     <span>147.2 million (14.7%)</span> IDO(To raise <span>80BNB</span>)
-   
   </>,
   <>
     <span>45.8 million (4.58%)</span> Remaining
   </>,
 ]
-function Whitepaper() {
+function Whitepaper(props) {
   const status = useScript("https://www.gstatic.com/charts/loader.js")
   //Initialise the chart
   status == "ready" && InitChart()
-  console.log("Stat", status)
+  // console.log("Stat", status)
   const handleResize = () => {
     status == "ready" && drawChart()
   }
@@ -63,6 +62,7 @@ function Whitepaper() {
   }, [status])
   return (
     <Layout
+      pathname={props.location.pathname}
       title="Zebra Finanace Tokenomics"
       description="Our strategy for success"
       index={0}

@@ -1,8 +1,8 @@
 import * as React from "react"
 import Layout from "../components/layout"
 
-const NotFoundPage = () => (
-  <Layout title="404: Not found">
+const NotFoundPage = (props) => (
+  <Layout pathname={props.location.pathname} title="404: Not found">
     <div
       style={{
         minHeight: "80vh",

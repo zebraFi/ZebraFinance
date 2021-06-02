@@ -13,17 +13,24 @@ import SEO from "./seo"
 
 import Footer from "./Footer"
 
-const Layout = ({ children, index,description,title }) => {
+const Layout = ({ children, index, description, title,pathname }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+    query {
+      socials: file(
+        sourceInstanceName: { eq: "images" }
+        relativePath: { eq: "Socials.jpeg" }
+      ) {
+        childImageSharp {
+          resize(width: 1200) {
+            src
+            height
+            width
+          }
         }
       }
     }
   `)
-
+  // console.log(data)
   return (
     <>
       {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
@@ -34,7 +41,7 @@ const Layout = ({ children, index,description,title }) => {
       //   padding: `0 1.0875rem 1.45rem`,
       // }}
       >
-        <SEO description={description} title={title} />
+        <SEO pathname={pathname} description={description} title={title} image={data.socials.childImageSharp.resize} />
         <Nav index={index} />
         <main style={{ margin: "80px 0 0 0" }}>{children}</main>
         <Footer />
