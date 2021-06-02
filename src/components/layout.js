@@ -18,7 +18,7 @@ const Layout = ({ children, index, description, title,pathname }) => {
     query {
       socials: file(
         sourceInstanceName: { eq: "images" }
-        relativePath: { eq: "Socials.jpeg" }
+        relativePath: { eq: "Socials.png" }
       ) {
         childImageSharp {
           resize(width: 1200) {
