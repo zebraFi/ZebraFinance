@@ -30,6 +30,7 @@ const Layout = ({ children, index, description, title,pathname }) => {
       }
     }
   `)
+  
   // console.log(data)
   return (
     <>
