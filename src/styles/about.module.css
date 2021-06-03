@@ -1,0 +1,52 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 5rem 8rem;
+    background: rgb(32, 32, 32);
+    background: linear-gradient(
+      180deg,
+      rgba(32, 32, 32, 1) 21%,
+      rgba(19, 19, 19, 1) 100%
+    );
+    border-top: 1px solid var(--gold);
+    border-bottom: 1px solid var(--gold);
+}
+
+.section{
+    margin: 5rem 0;
+}
+.section h2,.section p{
+    color: var(--gold1);
+    margin: 0;
+}
+.section h2{
+    margin: 0;
+    font-size: 2rem;
+    font-family: "Poppins";
+    text-transform: uppercase;
+}
+.section h3{
+    font-size: 5rem;
+    color: var(--gold);
+    margin: 0.5rem 0 1rem 0;
+    text-transform: uppercase;
+}
+.divider{
+    height: 0.1rem;
+    width: 15rem;
+    background: var(--gold);
+    border-radius: 100px;
+    margin:  0 0  3rem 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .container{
+       
+        padding: 5rem 2rem;
+
+    }
+    
+}

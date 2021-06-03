@@ -1,4 +1,5 @@
 import * as React from "react"
+import About from "../components/About"
 import Landing from "../components/Landing"
 import Roadmap from "../components/Roadmap"
 import Tokenomics from "../components/Tokenomics"
@@ -16,6 +17,7 @@ const IndexPage = (props) => (
         </h3>
       }
     />
+    <About/>
     <Tokenomics/>
     {/* <Roadmap /> */}
     <PoweredBy />

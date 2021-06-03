@@ -133,7 +133,13 @@ function Landing({ text }) {
     <div style={{ position: "relative" }}>
       <div className={styles.container}>
         {trail.map(({ ...style }, index) => (
-          <animated.div key={index} style={{width:'100%',...style}}>
+          <animated.div
+            key={index}
+            style={{
+              width: "100%",
+              ...style,
+            }}
+          >
             {items[index]}
           </animated.div>
         ))}
