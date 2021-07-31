@@ -27,17 +27,17 @@ function Nav({ index }) {
           <img src="/Logo.svg"  />
         </Link>
         <ul className={styles.content}>
-          {/* <li className={styles.navLink}>
+          <li className={styles.navLink}>
             <Link
               style={index === 0 ? selectedStyle : unSelectedStyle}
-              to="/tokenomics"
+              to="/vote"
             >
               <span>
-              Tokenomics
+              Vote
               </span>
               
             </Link>
-          </li> */}
+          </li>
           <li className={styles.navLink}>
             <Link
               style={index === 1 ? selectedStyle : unSelectedStyle}
@@ -49,6 +49,14 @@ function Nav({ index }) {
           <li className={styles.navLink}>
             <Link
               style={index === 2 ? selectedStyle : unSelectedStyle}
+              to="/lottery"
+            >
+              lottery
+            </Link>
+          </li>
+          <li className={styles.navLink}>
+            <Link
+              style={index === 3 ? selectedStyle : unSelectedStyle}
               to="/farm"
             >
               Farm
@@ -100,14 +108,14 @@ function Nav({ index }) {
         }}
         className={styles.collapseContent}
       >
-        {/* <li className={styles.navLink}>
+        <li className={styles.navLink}>
           <Link
             style={index === 0 ? selectedStyle : unSelectedStyle}
-            to="/tokenomics"
+            to="/vote"
           >
-            Tokenomics
+            vote
           </Link>
-        </li> */}
+        </li>
         <li className={styles.navLink}>
           <Link
             style={index === 1 ? selectedStyle : unSelectedStyle}
@@ -119,6 +127,14 @@ function Nav({ index }) {
         <li className={styles.navLink}>
           <Link
             style={index === 2 ? selectedStyle : unSelectedStyle}
+            to="/lottery"
+          >
+            lottery
+          </Link>
+        </li>
+        <li className={styles.navLink}>
+          <Link
+            style={index === 3 ? selectedStyle : unSelectedStyle}
             to="/farm"
           >
             Farm

@@ -1,16 +1,21 @@
-.mainContainer{
-  margin: 5rem  auto 0 auto;
-
+.mainContainer {
+  padding: 5rem 0;
+  background: rgb(32, 32, 32);
+  background: linear-gradient(
+    180deg,
+    rgba(32, 32, 32, 1) 21%,
+    rgba(19, 19, 19, 1) 100%
+  );
 }
-.title{
+.title {
   font-size: 70px;
-  margin: 5rem 0;
+  padding: 0 0 5rem 0;
   color: var(--gold);
 }
 .timeline {
   position: relative;
   max-width: 1200px;
-  margin: 0  auto 0 auto;
+  margin: 0 auto 0 auto;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -23,7 +28,7 @@
   bottom: 0;
   left: 50%;
   margin-left: -3px;
-  z-index: -1;
+  z-index: 1;
 }
 
 /* Container around content */
@@ -44,7 +49,7 @@
   right: -11px;
   top: 15px;
   border-radius: 50%;
-  z-index: 1;
+  z-index: 2;
   background-color: var(--onyx);
   box-shadow: inset 0px 4px 8px hsl(36, 48%, 54%);
 

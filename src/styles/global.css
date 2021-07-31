@@ -19,7 +19,7 @@ html {
   overflow-y: scroll;
   font-family: "Poppins",serif, sans-serif,georgia;
   font-size: 62.5% !important;
-  background-color: var(--zebraWhite);
+  background-color: #eaeade;
 
   /* background-image: url("/stars.svg"); */
   /* background-size: cover; */

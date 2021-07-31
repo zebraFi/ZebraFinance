@@ -1,11 +1,13 @@
 .container {
-  padding: 10rem 0;
+  padding: 5rem 0;
   background: rgb(32, 32, 32);
   background: linear-gradient(
     90deg,
     rgba(32, 32, 32, 1) 21%,
     rgba(19, 19, 19, 1) 100%
   );
+  border-top: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
 }
 .row {
   display: flex;

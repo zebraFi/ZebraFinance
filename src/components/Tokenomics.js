@@ -66,17 +66,26 @@ function Tokenomics() {
         <Card
           countStart={countStart}
           src="/coins.svg"
-          num={1000000000}
-          sub={<p>Total</p>}
+          num={885000000}
+          sub={
+            <>
+              <p>
+                <b>Total</b> <br />
+                <b style={{textDecoration:'underline'}}>Cross-chain liquidity:</b> <br/> 37.6%
+                <br />
+                <b style={{textDecoration:'underline'}}>BSC liquidity:</b><br/> 20%
+              </p>
+            </>
+          }
         />
-         <Card
+        <Card
           countStart={countStart}
           src="/bullhorn.svg"
           percent={true}
-          num={25}
-          sub={<p>Marketing</p>}
+          num={15}
+          sub={<p>Marketing & Future Incentives</p>}
         />
- <Card
+        {/* <Card
           countStart={countStart}
           src="/burn.svg"
           percent={true}
@@ -84,7 +93,7 @@ function Tokenomics() {
           sub={
             <p>20% of total supply burned in the first 8 weeks after launch</p>
           }
-        />
+        /> */}
         <Card
           countStart={countStart}
           src="/IDO.svg"
@@ -95,26 +104,25 @@ function Tokenomics() {
         <Card
           countStart={countStart}
           src="/team.svg"
-          num={12}
+          num={12.7}
           percent={true}
-          sub={<p>Team Tokens</p>}
+          sub={<p>Team Tokens & Dev Funds</p>}
         />
-        <Card
+        {/* <Card
           countStart={countStart}
           src="/strategic-plan.svg"
           num={12}
           percent={true}
           sub={<p>Future Incentives</p>}
-        />
-        <Card
+        /> */}
+        {/* <Card
           countStart={countStart}
           src="/investment.svg"
           percent={true}
           num={10}
           sub={<p>Dev Funds</p>}
-        />
-       
-       
+        /> */}
+
         {/* <Card title="190,000,000" sub="Airdrop" /> */}
       </div>
     </div>

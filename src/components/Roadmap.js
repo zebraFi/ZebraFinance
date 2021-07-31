@@ -48,118 +48,29 @@ function Roadmap() {
       <h2 className={`${styles.title}`}>Roadmap</h2>
       <div className={styles.timeline}>
         <Left
-          title="May 2021"
+          title="Q3 2021"
           body={
             <p>
-              Market Research.
-              <br /> Draft whitepaper
+              Farming contracts released
+              <br /> Lottery
+              <br /> Governance Platform Integration
             </p>
           }
           done={true}
         />
         <Right
-          title="June 2021"
+          title="Q4 2021"
           body={
             <p>
-              Pitch to early adopters and vendors
+              Major marketing recommencing
               <br />
-              On-board first potential e-commerce platforms
-            </p>
-          }
-        />
-        <Left
-          title="July 2021"
-          body={
-            <p>
-              Finalize whitepaper
+              Exchange listing
               <br />
-              Develop CC token smart contract on test-net
+              Premium NFT platform release
               <br />
-              Deploy smart contract to Ethereum main-net
-            </p>
-          }
-        />
-        <Right
-          title="August 2021"
-          body={
-            <p>
-              Develop website and social media
+              Release of limit order dex
               <br />
-              Begin marketing exposure campaign
-              <br />
-              Host Public sale via Unicrypt V2 for Safe Launch
-              <br />
-              Post-launch formalities and listings
-              <br /> Expand core development team
-            </p>
-          }
-        />
-        <Left
-          title="September 2021"
-          body={
-            <p>
-              Develop marketplace on test-net
-              <br />
-              Integrate cashback and discount token utility on test-net
-              <br />
-              Beta testing to go live
-            </p>
-          }
-        />
-        <Right
-          title="October 2021"
-          body={
-            <p>
-              Fully implement all rewards systems on test-net
-              <br />
-              Develop redeemable NFT vouchers on ERC1155
-            </p>
-          }
-        />
-        <Left
-          title="November 2021"
-          body={
-            <p>
-              End of Beta testing
-              <br />
-              Release of Marketplace main-net
-              <br />
-              Expand marketing
-            </p>
-          }
-        />
-        <Right
-          title="December 2021"
-          body={
-            <p>
-              Begin to bridge CC Token to other blockchains
-              <br />
-              Expansion into global E-commerce marketplaces
-            </p>
-          }
-        />
-        <Left
-          title="January 2022"
-          body={<p>Begin mobile application development</p>}
-        />
-        <Right
-          title="Q4 and beyond"
-          body={
-            <p>
-              Begin development of CC coin blockchain
-              <br />
-              Incubate and absorb other E-commerce cryptocurrency marketplaces
-            </p>
-          }
-        />
-        <Left
-          title="End-Goal"
-          body={
-            <p>
-              Build a global ecosystem that ultimately provides the best
-              cryptocurrency E-commerce available whilst retaining
-              decentrailization and preserving the rights users have to spend
-              their earned cryptocurrencies
+              New website + Launchpad
             </p>
           }
         />

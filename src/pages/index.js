@@ -19,7 +19,7 @@ const IndexPage = (props) => (
     />
     <About/>
     <Tokenomics/>
-    {/* <Roadmap /> */}
+    <Roadmap />
     <PoweredBy />
   </Layout>
 )

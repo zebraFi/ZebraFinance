@@ -158,7 +158,7 @@ function Farm(props) {
   }
   // console.log("ROLADED")
   return (
-    <Layout pathname={props.location.pathname} title="Farming ZebraFinance" index={2}>
+    <Layout pathname={props.location.pathname} title="Farming ZebraFinance" index={3}>
       <div
         style={{
           minHeight: "80vh",
