@@ -48,7 +48,7 @@ function Roadmap() {
       <h2 className={`${styles.title}`}>Roadmap</h2>
       <div className={styles.timeline}>
         <Left
-          title="Q3 2021"
+          title="Q4 2021"
           body={
             <p>
               Farming contracts released
@@ -59,7 +59,7 @@ function Roadmap() {
           done={true}
         />
         <Right
-          title="Q4 2021"
+          title="Q1 2022"
           body={
             <p>
               Major marketing recommencing
