@@ -1,6 +1,24 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import detectEthereumProvider from "@metamask/detect-provider"
 import Layout from "../components/layout"
+import * as styles from "../styles/farm.module.css"
+
+const getTime = () => {
+  const now = new Date().getTime()
+  const timeout = new Date("August 11, 2021 11:00:00 GMT+00:00").getTime()
+  const difference = timeout - now
+  const sec = 1000
+  const min = sec * 60
+  const hr = min * 60
+  const Day = hr * 24
+  return {
+    timeLeft: difference > 0,
+    day: Math.floor(difference / Day),
+    hour: Math.floor((difference % Day) / hr),
+    min: Math.floor((difference % hr) / min),
+    sec: Math.floor((difference % min) / sec),
+  }
+}
 
 const Tick = () => {
   return (
@@ -96,6 +114,16 @@ const getBlockchain = (maskconnect, setMaskConnect) =>
   })
 
 function Farm(props) {
+  const [time, setTIme] = useState(getTime())
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTIme(getTime())
+    }, 1000)
+    return () => {
+      clearInterval(timer)
+    }
+  }, [])
+
   const [maskConnect, setMaskConnect] = useState({
     //TO start connection process
     connect: false,
@@ -158,8 +186,37 @@ function Farm(props) {
   }
   // console.log("ROLADED")
   return (
-    <Layout pathname={props.location.pathname} title="Farming ZebraFinance" index={3}>
-      <div
+    <Layout
+      pathname={props.location.pathname}
+      title="Farming ZebraFinance"
+      index={3}
+    >
+      <div className={styles.container}>
+        <h1 className={styles.text}>
+          Farms open
+          <br /> 11:00 am, August 11th, 2021. (UTC)
+          <br />
+          <div className={styles.timeblock}>
+            <div className={styles.timeunit}>
+              <span>{time.day}</span>
+              <span>Day</span>
+            </div>
+            <div className={styles.timeunit}>
+              <span>{time.hour <= 9 ? `0${time.hour}` : time.hour}</span>
+              <span>Hour</span>
+            </div>
+            <div className={styles.timeunit}>
+              <span>{time.min <= 9 ? `0${time.min}` : time.min}</span>
+              <span>Minute</span>
+            </div>
+            <div className={styles.timeunit}>
+              <span>{time.sec <= 9 ? `0${time.sec}` : time.sec}</span>
+              <span>Second</span>
+            </div>
+          </div>
+        </h1>
+      </div>
+      {/* <div
         style={{
           minHeight: "80vh",
           display: "flex",
@@ -236,7 +293,7 @@ function Farm(props) {
         >
           {maskConnect.rejected ? "Restart" : "Connect"}
         </button>
-      </div>
+      </div> */}
     </Layout>
   )
 }

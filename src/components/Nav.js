@@ -6,12 +6,10 @@ import { Link } from "gatsby"
 
 const selectedStyle = {
   color: "rgb(195 149 82)",
-  padding: "1rem",
-  borderRadius: "16px",
-  border: "4px solid rgb(195 149 82)",
+  transform: "scale(1.2)",
 }
 const unSelectedStyle = {
-  color: "rgb(195 149 82)",
+  color: "#fff",
 }
 function Nav({ index }) {
   const [collapse, setCollapse] = useState(true)
@@ -24,81 +22,71 @@ function Nav({ index }) {
     <div className={styles.container}>
       <nav className={styles.innerContainer}>
         <Link className={styles.logo} to="/">
-          <img src="/Logo.svg"  />
+          <img src="/Logo.svg" />
         </Link>
         <ul className={styles.content}>
-          <li className={styles.navLink}>
-            <Link
-              style={index === 0 ? selectedStyle : unSelectedStyle}
-              to="/vote"
-            >
-              <span>
-              Vote
-              </span>
-              
+          <li
+            style={index === 0 ? selectedStyle : unSelectedStyle}
+            className={styles.navLink}
+          >
+            <Link to="/vote">
+              <span>Vote</span>
             </Link>
           </li>
-          <li className={styles.navLink}>
-            <Link
-              style={index === 1 ? selectedStyle : unSelectedStyle}
-              to="/howto"
-            >
-              How to buy
-            </Link>
+          <li
+            style={index === 1 ? selectedStyle : unSelectedStyle}
+            className={styles.navLink}
+          >
+            <Link to="/howto">How to buy</Link>
           </li>
-          <li className={styles.navLink}>
-            <Link
-              style={index === 2 ? selectedStyle : unSelectedStyle}
-              to="/lottery"
-            >
-              lottery
-            </Link>
+          <li
+            style={index === 2 ? selectedStyle : unSelectedStyle}
+            className={styles.navLink}
+          >
+            <Link to="/lottery">lottery</Link>
           </li>
-          <li className={styles.navLink}>
-            <Link
-              style={index === 3 ? selectedStyle : unSelectedStyle}
-              to="/farm"
-            >
-              Farm
-            </Link>
+          <li
+            style={index === 3 ? selectedStyle : unSelectedStyle}
+            className={styles.navLink}
+          >
+            <Link to="/farm">Farm</Link>
           </li>
-          <li >
-            <span
-              style={{ fontSize: "16px",fontFamily: "Exo 2",cursor:'pointer', ...selectedStyle }}
+          <li  className={styles.trade}>
+            <a
               // target="_blank"
               // rel="noopener noreferrer"
-              // href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xd7de0f4a2547d401dc145f40d76731f06c46ef7f"
+              href="https://dex.zebrafinance.app/#/swap?outputCurrency=0xbF7BD762137B5859a1448Fa78Fc5D9B675429925"
             >
               Trade
-            </span>
+            </a>
           </li>
         </ul>
         <div className={`${styles.socials} ${styles.socialsLg}`}>
-            <a
-              href="https://t.me/ZebraDefi"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {" "}
-              <img src="/telegram.svg" />
-            </a>
-            <a
-              href="https://twitter.com/FinanceZebra?s=20"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {" "}
-              <img src="/twitter.svg" />
-            </a>
-            <a
-              href="https://zebradfi.medium.com/introducing-zebra-finance-zfi-d9694b83ce1e"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {" "}
-              <img src="/medium.svg" />
-            </a>
-          </div>
+          <a
+            href="https://t.me/ZebraDefi"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            <img src="/telegram.svg" />
+          </a>
+          <a
+            href="https://twitter.com/FinanceZebra?s=20"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            <img src="/twitter.svg" />
+          </a>
+          <a
+            href="https://zebradfi.medium.com/introducing-zebra-finance-zfi-d9694b83ce1e"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            <img src="/medium.svg" />
+          </a>
+        </div>
         <Hamburger collapse={collapse} setCollapse={setCollapse} />
       </nav>
 
@@ -108,46 +96,40 @@ function Nav({ index }) {
         }}
         className={styles.collapseContent}
       >
-        <li className={styles.navLink}>
-          <Link
-            style={index === 0 ? selectedStyle : unSelectedStyle}
-            to="/vote"
-          >
-            vote
-          </Link>
+        <li
+          style={index === 0 ? selectedStyle : unSelectedStyle}
+          className={styles.navLink}
+        >
+          <Link to="/vote">vote</Link>
         </li>
-        <li className={styles.navLink}>
-          <Link
-            style={index === 1 ? selectedStyle : unSelectedStyle}
-            to="/howto"
-          >
-            How to buy
-          </Link>
+        <li
+          style={index === 1 ? selectedStyle : unSelectedStyle}
+          className={styles.navLink}
+        >
+          <Link to="/howto">How to buy</Link>
         </li>
-        <li className={styles.navLink}>
-          <Link
-            style={index === 2 ? selectedStyle : unSelectedStyle}
-            to="/lottery"
-          >
-            lottery
-          </Link>
+        <li
+          style={index === 2 ? selectedStyle : unSelectedStyle}
+          className={styles.navLink}
+        >
+          <Link to="/lottery">lottery</Link>
         </li>
-        <li className={styles.navLink}>
-          <Link
-            style={index === 3 ? selectedStyle : unSelectedStyle}
-            to="/farm"
-          >
-            Farm
-          </Link>
+        <li
+          style={index === 3 ? selectedStyle : unSelectedStyle}
+          className={styles.navLink}
+        >
+          <Link to="/farm">Farm</Link>
         </li>
-        <li style={{ fontSize: "16px",fontFamily: "Exo 2",cursor:'pointer', ...selectedStyle }}>
-          <span
-          // target="_blank"
-          // rel="noopener noreferrer"
-          // href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xd7de0f4a2547d401dc145f40d76731f06c46ef7f"
+        <li
+        className={styles.trade}
+        >
+          <a
+            // target="_blank"
+            // rel="noopener noreferrer"
+            href="https://dex.zebrafinance.app/#/swap?outputCurrency=0xbF7BD762137B5859a1448Fa78Fc5D9B675429925"
           >
             Trade
-          </span>
+          </a>
         </li>
         <li className={styles.socials}>
           <a

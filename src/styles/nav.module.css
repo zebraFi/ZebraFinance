@@ -23,7 +23,7 @@
 .logo {
   flex: 1;
 }
-.logo img{
+.logo img {
   height: 5.5rem;
 }
 .content,
@@ -68,7 +68,43 @@
   cursor: pointer;
   text-transform: capitalize;
   text-align: center;
-  transition: transform .3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+.navLink:hover {
+  transform: scale(1.2);
+}
+.navLink a {
+  color: inherit;
+}
+.trade {
+  position: relative;
+  font-size: 18px;
+  font-weight: 800;
+  font-family: "Exo 2";
+  cursor: pointer;
+  border-radius: 1000px;
+  border: 4px solid rgb(195 149 82);
+  padding: 1rem;
+  color: rgb(195 149 82);
+}
+.trade a{
+  padding: 1rem;
+  color:inherit;
+}
+.trade:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  background-color: rgb(195 149 82/15%);
+  opacity: 0;
+  z-index: -1;
+}
+.trade:hover:after {
+  opacity: 1;
 }
 .collapseContent .navLink {
   margin: 2rem 0;
@@ -78,10 +114,10 @@
   width: 3rem;
   margin: 0 0.5rem;
 }
-.collapseContent .socials{
-  margin: 2rem  0 1rem 0;
+.collapseContent .socials {
+  margin: 2rem 0 1rem 0;
 }
-.collapseContent .socials img{
+.collapseContent .socials img {
   margin: 0 1.5rem;
 }
 .navLink::before {
@@ -100,7 +136,7 @@
 .navLink:hover::before {
   transform: translate(-50%, 10%) scaleX(1);
 }
-.socialsLg{
+.socialsLg {
   display: none;
   flex: 1;
   justify-content: flex-end;
@@ -114,7 +150,7 @@
   .toggle {
     display: none;
   }
-  .socialsLg{
+  .socialsLg {
     display: flex;
   }
 }
