@@ -5,7 +5,7 @@ import * as styles from "../styles/farm.module.css"
 
 const getTime = () => {
   const now = new Date().getTime()
-  const timeout = new Date("August 11, 2021 11:00:00 GMT+00:00").getTime()
+  const timeout = new Date("August 15, 2021 11:00:00 GMT+00:00").getTime()
   const difference = timeout - now
   const sec = 1000
   const min = sec * 60
