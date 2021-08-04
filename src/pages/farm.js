@@ -194,7 +194,7 @@ function Farm(props) {
       <div className={styles.container}>
         <h1 className={styles.text}>
           Farms open
-          <br /> 11:00 am, August 11th, 2021. (UTC)
+          <br /> 11:00 am, August 15th, 2021. (UTC)
           <br />
           <div className={styles.timeblock}>
             <div className={styles.timeunit}>
