@@ -1,14 +1,112 @@
 .container {
-    padding: 5rem;
-    background: rgb(32, 32, 32);
-    background: linear-gradient(
-      90deg,
-      rgba(32, 32, 32, 1) 21%,
-      rgba(19, 19, 19, 1) 100%
-    );
-    min-height: 90vh;
+  padding: 5rem 2rem;
+  background: rgb(32, 32, 32);
+  background: linear-gradient(
+    90deg,
+    rgba(32, 32, 32, 1) 21%,
+    rgba(19, 19, 19, 1) 100%
+  );
+  min-height: 90vh;
+}
+.container p {
+  font-size: 18px;
+}
+.flexContainer{
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 0;
+}
+.flexContainer>*{
+  margin:0 1rem;
+  width: 50%;
+}
+.img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stepContainer p{
+  text-align: left;
+}
+.stepContainer span{
+  color: var(--gold);
+}
+.stepContainer ul{
+  background-color: rgb(53, 53, 53);
+  border-radius: 10px;
+  padding: 1rem;
+}
+.addressContainer{
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: column;
+  /* height: 30px; */
+  width: 100%;
+  /* padding: 2rem; */
+  margin: 2rem 0 3rem 0;
+}
+.addressContainer h4{
+  color: var(--gold);
+  font-size: 3.2rem;
+}
+.addressContainer >*{
+  flex:1 1;
+}
+
+.addressContainer input{
+  /* width: 340px; */
+  color: var(--gold);
+  border: none;
+  outline: none;
+  margin: 0 auto;
+  background: rgb(53, 53, 53);
+  text-align: center;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  padding: 1rem;
+}
+.addressContainer button{
+  border: none;
+  background-color: var(--gold);
+  font-size: 16px;
+  font-weight: 800;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 0 0 10px 10px;
+  padding: 1rem;
+}
+
+.stepTitle {
+  font-size: 3.2rem;
+  color: var(--gold);
+  margin: 2rem 0;
+  text-align: left;
+}
+@media only screen and (max-width: 680px) {
+  .address >*{
+    margin: 0 1rem;
   }
-  .container p {
-    font-size: 18px;
+  .address p:first-child{
+    margin: 0 0 0 1rem;
+    font-size: 16px;
   }
-  
+  .address input{
+  font-size: 14px;
+  }
+  .addressContainer button{
+    padding: 0 1rem;
+   
+  }
+}
+@media only screen and (max-width: 768px) {
+  .flexContainer{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .flexContainer>*{
+    width: 100%;
+  }
+}
