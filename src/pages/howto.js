@@ -27,13 +27,13 @@ function Howto(props) {
         <h2 className="gold">Connecting to Binance smart chain</h2>
         <p>
           Let's get you started on your journey to the moon 🚀 <br />
-          This is a guide to assist in connecting to the Binance smart chain.
+          This is a guide to assist in connecting to the Ekta Chain MainNet.
         </p>
         <hr />
         <div className={styles.flexContainer}>
           <Step
             index={1}
-            title="Create a Wallet & add the BSC network"
+            title="Create a Wallet & add the Ekta network"
             info={
               <>
                 <p>
@@ -65,18 +65,18 @@ function Howto(props) {
                       Select <span>custom RPC</span> & Fill the form with the
                       below data to set up the BSC mainnet. <br />
                       <br />
-                      <span>Network Name:</span> Binance Smart Chain
+                      <span>Network Name:</span> Ekta Chain
                       <br />
                       <span>
                         RPC URL:
-                      </span> https://bsc-dataseed.binance.org/ <br />
+                      </span> https://mainnet.ekta.io <br />
                       <span>Chain ID: </span>
-                      56
+                      998
                       <br />
-                      <span>Currency Symbol: </span> BNB
+                      <span>Currency Symbol: </span> EKTA
                       <br />
                       <span>Block Explorer URL:</span>
-                      https://bscscan.com
+                      (none currently)
                     </li>
                   </ul>{" "}
                   Click Save and Make sure to copy the contract address below
@@ -98,7 +98,7 @@ function Howto(props) {
             readOnly
             ref={inputRef}
             type="text"
-            value="0xbF7BD762137B5859a1448Fa78Fc5D9B675429925"
+            value="(make this zfi address)"
           />
 
           <button
@@ -120,7 +120,7 @@ function Howto(props) {
               <>
                 <p>
                   Ensure you have selected the{" "}
-                  <span>Binance Smart Chain network</span> in the network
+                  <span>Ekta network</span> in the network
                   dropdown and go ahead and click <span>Add Token</span> at the
                   bottom of your wallet, and then paste our contract address.
                   <br />
@@ -144,7 +144,7 @@ function Howto(props) {
         <div className={styles.flexContainer}>
           <Step
             index={3}
-            title="Swap BNB for ZebraFinance!"
+            title="Swap Ekta for ZebraFinance!"
             info={
               <>
                 <p>
@@ -153,7 +153,7 @@ function Howto(props) {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://dex.zebrafinance.app/#/swap?outputCurrency=0xbF7BD762137B5859a1448Fa78Fc5D9B675429925"
+                    href="https://dex.zebrafinance.app/#/swap?outputCurrency=zfiaddress"
                   >
                     <span> here</span>
                   </a>
@@ -178,13 +178,12 @@ function Howto(props) {
                   image={props.data.slip.childImageSharp.gatsbyImageData}
                 />
                 <p>
-                  Once the slippage is set, and you have the BNB amount set that
+                  Once the slippage is set, and you have the Ekta amount set that
                   you wish to swap for ZebraFiance as shown, just click Swap and
                   wait patiently for the transaction to clear.
                   <br />
-                  <br /> This process may not be instant and can take anywhere
-                  from a few minutes up to an hour sometimes, depending on
-                  traffic.
+                  <br /> This process may not be instant and can take
+                  a few minutes, depending on traffic.
                   <br /> <br />
                   Once the transaction has been cleared, you should have
                   ZebraFinance in your Wallet! <br />
