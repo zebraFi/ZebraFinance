@@ -49,40 +49,35 @@ function about() {
         info={
           <p>
             Zebra Finance ($ZFI) is a passion project formed by a team of crypto
-            veterans for the overall crypto community. Our token features a
-            unique deflationary design that utilizes a linear regression burn
-            function that decreases the total supply with every transaction
-            made. Adding to the deflationary nature of our transactional burn
-            function, we will also be burning 20% of the total supply in the
-            first 8 weeks after launch. Zebra DAO is a 100% decentralized
-            governance protocol.
+            veterans Specifically made for $EKTA chain and its community. Our token features are
+            simular to your commonly known Decentralised DEX and offers complete trading function  
+            on the Ekta Chain. Zebra DAO is a 100% decentralized governance protocol meaning the 
+            holders have a majority say on our future! 
           </p>
         }
       />
       <Section
         title="How Zebra will"
-        subTitle="alter the future of DeFi"
+        subTitle="alter the future of Ekta Ecosystem"
         info={
           <p>
-            Zebra Finance is introducing one of the first Regressive Linear
-            burns into a governance token that will be managed through our Zebra
-            DAO. The value of $ZFI will be derived both by the novel
-            deflationary nature of the token and the community involvement in
-            relation to future releases. Features will be implemented as we
-            progress through our roadmap and voted on by token holders on our
-            DAO.
+            Zebra Finance is introducing one of the first Trading platforms on Ekta
+            Chain and at the time of release is the only current DEX (decentralised exchange)
+            on the Ekta network. This addition to the ecosystem will allow its functionality, 
+            use case and set out the fundamentals on which we hope ekta will run.
+            As well as our trading platform we will introduce liquidity staking, much loved NFT's
+            and unity games e.g. Lotteries and lucky draws.
           </p>
         }
       />
 
       {/* <p>
-        How do we ($ZFI) plan to alter the future of DeFi? Zebra Finance is
-        introducing one of the first Regressive Linear burns into a governance
-        token that will be managed through our Zebra DAO. The value of $ZFI will
-        be derived both by the novel deflationary nature of the token and the
-        community involvement in relation to future releases. Features will be
-        implemented as we progress through our roadmap and voted on by token
-        holders on our DAO.
+        How do we ($ZFI) plan to alter the future of DeFi? Zebra Finance is introducing one of the first Trading platforms on Ekta
+            Chain and at the time of release is the only current DEX (decentralised exchange)
+            on the Ekta network. This addition to the ecosystem will allow its functionality, 
+            use case and set out the fundamentals on which we hope ekta will run.
+            As well as our trading platform we will introduce liquidity staking, much loved NFT's
+            and unity games e.g. Lotteries and lucky draws.
       </p> */}
     </div>
   )
