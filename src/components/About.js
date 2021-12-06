@@ -72,7 +72,7 @@ function about() {
       />
 
       {/* <p>
-        How do we ($ZFI) plan to alter the future of DeFi? Zebra Finance is introducing one of the first Trading platforms on Ekta
+            How do we ($SFI) plan to alter the future of DeFi? Safari Finance is introducing one of the first Trading platforms on Ekta
             Chain and at the time of release is the only current DEX (decentralised exchange)
             on the Ekta network. This addition to the ecosystem will allow its functionality, 
             use case and set out the fundamentals on which we hope ekta will run.
