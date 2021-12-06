@@ -45,28 +45,28 @@ function about() {
     <div className={styles.container}>
       <Section
         title="About"
-        subTitle="Zebra Finanace"
+        subTitle="Safari Finanace"
         info={
           <p>
-            Zebra Finance ($ZFI) is a passion project formed by a team of crypto
-            veterans Specifically made for $EKTA chain and its community. Our token features are
-            simular to your commonly known Decentralised DEX and offers complete trading function  
-            on the Ekta Chain. Zebra DAO is a 100% decentralized governance protocol meaning the 
+            Safari Finance ($SFI) is a passion project formed by a team of crypto
+            veterans Specifically made for $Cross Chain and reaching its entire DeFi community. Our token features are
+            simular to your commonly known Decentralised DEX and offers complete cross chain trading function  
+            birthed on BSC (Binance smart chain). Safari DAO is a 100% decentralized governance protocol meaning the 
             holders have a majority say on our future! 
           </p>
         }
       />
       <Section
-        title="How Zebra will"
-        subTitle="alter the future of Ekta Ecosystem"
+        title="How Safari will"
+        subTitle="alter the future of finance on the blockchain"
         info={
           <p>
-            Zebra Finance is introducing one of the first Trading platforms on Ekta
-            Chain and at the time of release is the only current DEX (decentralised exchange)
-            on the Ekta network. This addition to the ecosystem will allow its functionality, 
-            use case and set out the fundamentals on which we hope ekta will run.
-            As well as our trading platform we will introduce liquidity staking, much loved NFT's
-            and unity games e.g. Lotteries and lucky draws.
+            Safari Finance will be launching a new trading platform which currently operates on the 
+            Binance Chain and will soon expand to other major networks such as
+            Ethereum, Solana, Polygon, Phantom and more. By branching out to other networks, we
+            can ensure scalability for our $afari Doa.
+            As well as our trading platform we will introduce liquidity staking, vualts, much loved NFT's
+            and interactive games e.g. Lotteries, Prediction, Lucky Pots and more!
           </p>
         }
       />
